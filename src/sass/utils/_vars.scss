@@ -1,32 +1,33 @@
 :root {
-    --font-main: "DM Sans", sans-serif;
-    --font-accent: "Titan One", cursive;
-    --font-size: 16px;
+  --font-main: 'DM Sans', sans-serif;
+  --font-accent: 'Titan One', cursive;
+  --font-size: 16px;
 
-    --text-color-main: #000;
-    --text-color-accent: #907e82;
-    --text-color-light: #ffffff;
+  --text-color-main: #000;
+  --text-color-accent: #907e82;
+  --text-color-light: #ffffff;
 
-    --primary-color: #d41443;
-    --accent-color: #ffa5ba;
+  --primary-color: #d41443;
+  --accent-color: #ffa5ba;
 
-    --btn-primary-color: #d41342;
-    --btn-accent-color: #ecebeb;
+  --btn-primary-color: #d41342;
+  --btn-accent-color: #ecebeb;
 
-    --bg-color: #ffb8ca;
-    --bg-color-light: #fff5f6;
+  --bg-color: #ffb8ca;
+  --bg-color-light: #fff5f6;
 
-    --product-color-first: #ffb8ca;
-    --product-color-second: #f0d1a5;
-    --product-color-third: #c2e297;
+  --product-color-first: #ffb8ca;
+  --product-color-second: #f0d1a5;
+  --product-color-third: #c2e297;
 
-    --card-shadow: 0 8px 30px rgba(212, 20, 67, 0.1);
+  --card-shadow: 0 8px 30px rgba(212, 20, 67, 0.1);
 
-    --gutter: 32px;
-    --gutter-mob: 20px;
-    --section-padding: 60px;
+  --gutter: 32px;
+  --gutter-mob: 20px;
+  --section-padding: 60px;
 
-    --transition-prop: 0.25s ease;
+  --transition-prop: 0.25s ease;
+  //   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 //@mixin doesn't see other variables

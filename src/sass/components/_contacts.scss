@@ -87,4 +87,65 @@
 }
 
 .contacts__btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts__btn-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts__btn-address,
+.contacts__btn-franchise {
+  @include centered;
+
+  width: 161px;
+  height: 44px;
+  border-style: none;
+  border-radius: 22px;
+
+  @include font(500, var(--font-size), 1.31, 0.04em);
+  color: var(--text-color-light);
+  background-color: var(--btn-primary-color);
+
+  transition: background-color 250ms var(--transition-prop);
+}
+
+.contacts__btn-franchise {
+  color: var(--btn-primary-color);
+  background-color: var(--text-color-light);
+}
+
+.contacts__btn-icon-address {
+  fill: var(--text-color-light);
+  transition: background-color 250ms var(--transition-prop);
+}
+
+.contacts__btn-icon-franchise {
+  fill: var(--btn-primary-color);
+  transition: background-color 250ms var(--transition-prop);
+}
+
+.contacts__btn-icon {
+  margin-left: 8px;
+}
+
+.contacts__btn-franchise:hover {
+  color: var(--text-color-light);
+  background-color: var(--btn-primary-color);
+}
+
+.contacts__btn-franchise:hover .contacts__btn-icon-franchise {
+  fill: var(--text-color-light);
+}
+
+.contacts__btn-address:hover {
+  color: var(--btn-primary-color);
+  background-color: var(--text-color-light);
+}
+
+.contacts__btn-address:hover .contacts__btn-icon-address {
+  fill: var(--btn-primary-color);
 }
