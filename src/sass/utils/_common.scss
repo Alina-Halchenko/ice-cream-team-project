@@ -1,19 +1,19 @@
-@import "~node_modules/modern-normalize/modern-normalize.css";
+@import '~node_modules/modern-normalize/modern-normalize.css';
 
 html {
-    font-family: var(--font-main);
-    font-size: var(--font-size);
-    color: var(--text-color-main);
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  color: var(--text-color-main);
 }
 
 body.modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 h1,
@@ -23,50 +23,50 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
+  margin: 0;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visual-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    margin: 0 auto;
+  margin: 0 auto;
 
-    @include mobile-only() {
-        max-width: 480px;
-        padding-left: var(--gutter-mob);
-        padding-right: var(--gutter-mob);
-    }
+  @include mobile-only() {
+    max-width: 480px;
+    padding-left: var(--gutter-mob);
+    padding-right: var(--gutter-mob);
+  }
 
-    @include tablet-only() {
-        width: 768px;
-        padding-left: var(--gutter);
-        padding-right: var(--gutter);
-    }
+  @include tablet-only() {
+    width: 768px;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
 
-    @include desktop() {
-        width: 1200px;
-        padding-left: calc(var(--gutter) / 2);
-        padding-right: calc(var(--gutter) / 2);
-    }
+  @include desktop() {
+    width: 1200px;
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+  }
 }

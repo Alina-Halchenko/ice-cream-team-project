@@ -1,0 +1,90 @@
+.contacts {
+  background-image: linear-gradient(
+    to bottom,
+    #e5e5e5 10%,
+    var(--bg-color-light)
+  );
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  min-width: 280px;
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 32px;
+}
+
+.contacts__card {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background: var(--text-color-light);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts__paragraph {
+  margin-bottom: 24px;
+}
+
+.contacts__category {
+  display: inline-block;
+
+  width: 80px;
+  margin-bottom: 20px;
+
+  @include font(500, 12px, 1.86, 0.04em);
+  text-align: center;
+  border-radius: 4px;
+  color: var(--text-color-light);
+  background-color: var(--product-color-second);
+}
+
+.contacts__category--color {
+  width: 130px;
+  background-color: var(--product-color-third);
+}
+
+.contacts__address {
+  margin-bottom: 8px;
+  @include font(500, 12px, 1.86, 0.04em);
+}
+
+.contacts__text {
+  @include font(500, 12px, 1.5, 0.04em);
+  color: var(--text-color-accent);
+}
+
+.contacts__timetable {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.contacts__timetable-item {
+  margin-bottom: 8px;
+}
+
+.contacts__day {
+  @include font(500, 12px, 1.86, 0.04em);
+}
+.contacts__time {
+  @include font(500, 12px, 1.86, 0.04em);
+  color: var(--accent-color);
+}
+
+.contacts__tel,
+.contacts__meil {
+  @include font(500, 12px, 1.5, 0.04em);
+  color: var(--text-color-accent);
+}
+
+.contacts__btn-list {
+}
