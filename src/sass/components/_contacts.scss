@@ -1,21 +1,20 @@
 .contacts {
   background-image: linear-gradient(
     to bottom,
-    #e5e5e5 10%,
-    var(--bg-color-light)
+    #e5e5e5 24%,
+    var(--bg-color-light) 24%
   );
 }
 
 .contacts__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
   min-width: 280px;
   width: 100%;
   height: auto;
-
   margin-bottom: 32px;
+}
+
+.contacts__card:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .contacts__card {
@@ -68,10 +67,6 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-.contacts__timetable-item {
-  margin-bottom: 8px;
-}
-
 .contacts__day {
   @include font(500, 12px, 1.86, 0.04em);
 }
@@ -80,8 +75,7 @@
   color: var(--accent-color);
 }
 
-.contacts__tel,
-.contacts__meil {
+.contacts__link {
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
 }
@@ -101,8 +95,8 @@
 .contacts__btn-franchise {
   @include centered;
 
-  width: 161px;
-  height: 44px;
+  max-width: 161px;
+  max-height: 44px;
   border-style: none;
   border-radius: 22px;
 
@@ -111,6 +105,19 @@
   background-color: var(--btn-primary-color);
 
   transition: background-color 250ms var(--transition-prop);
+}
+.contacts__btn-address {
+  padding-left: 13px;
+  padding-right: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.contacts__btn-franchise {
+  padding-left: 31px;
+  padding-right: 28px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .contacts__btn-franchise {
