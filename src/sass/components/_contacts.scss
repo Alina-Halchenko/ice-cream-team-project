@@ -1,7 +1,7 @@
 .contacts {
   background-image: linear-gradient(
     to bottom,
-    #e5e5e5 24%,
+    var(--text-color-light) 24%,
     var(--bg-color-light) 24%
   );
 }
@@ -9,7 +9,6 @@
 .contacts__list {
   min-width: 280px;
   width: 100%;
-  height: auto;
   margin-bottom: 32px;
 }
 
@@ -34,7 +33,8 @@
 .contacts__category {
   display: inline-block;
 
-  width: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
   margin-bottom: 20px;
 
   @include font(500, 12px, 1.86, 0.04em);
@@ -45,7 +45,8 @@
 }
 
 .contacts__category--color {
-  width: 130px;
+  padding-left: 28px;
+  padding-right: 28px;
   background-color: var(--product-color-third);
 }
 
@@ -82,78 +83,42 @@
 
 .contacts__btn-list {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 10px;
 }
 
-.contacts__btn-item {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contacts__btn-address,
-.contacts__btn-franchise {
+.contacts__btn {
   @include centered;
 
-  max-width: 161px;
-  max-height: 44px;
+  min-width: 161px;
+  min-height: 44px;
+  padding: 12px;
+
   border-style: none;
   border-radius: 22px;
 
   @include font(500, var(--font-size), 1.31, 0.04em);
-  color: var(--text-color-light);
-  background-color: var(--btn-primary-color);
-
-  transition: background-color 250ms var(--transition-prop);
-}
-.contacts__btn-address {
-  padding-left: 13px;
-  padding-right: 10px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.contacts__btn-franchise {
-  padding-left: 31px;
-  padding-right: 28px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.contacts__btn-franchise {
   color: var(--btn-primary-color);
   background-color: var(--text-color-light);
+
+  transition: background-color var(--transition-prop);
 }
 
-.contacts__btn-icon-address {
-  fill: var(--text-color-light);
-  transition: background-color 250ms var(--transition-prop);
-}
-
-.contacts__btn-icon-franchise {
+.contacts__btn-icon {
   fill: var(--btn-primary-color);
-  transition: background-color 250ms var(--transition-prop);
+  transition: background-color var(--transition-prop);
 }
 
-.contacts__btn-icon-address,
-.contacts__btn-icon-franchise {
+.contacts__btn-icon {
   margin-left: 8px;
 }
 
-.contacts__btn-franchise:hover {
+.contacts__btn:hover {
   color: var(--text-color-light);
   background-color: var(--btn-primary-color);
 }
 
-.contacts__btn-franchise:hover .contacts__btn-icon-franchise {
+.contacts__btn:hover .contacts__btn-icon {
   fill: var(--text-color-light);
-}
-
-.contacts__btn-address:hover {
-  color: var(--btn-primary-color);
-  background-color: var(--text-color-light);
-}
-
-.contacts__btn-address:hover .contacts__btn-icon-address {
-  fill: var(--btn-primary-color);
 }
