@@ -1,0 +1,54 @@
+.gallery {
+    background-image: linear-gradient(to bottom, var(--bg-color-light) 20%, #ffffff 20%);
+
+    &__grid {
+        max-width: 320px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 2fr repeat(3, 1fr);
+
+        gap: 2.5px;
+
+    }
+
+    &__item {
+        display: grid;
+        gap: 2.5px;
+
+        &:nth-child(1) {
+            grid-template-rows: (45px - 2.5px) auto auto 1fr;
+        }
+
+        &:nth-child(2) {
+            grid-template-rows: (28px - 2.5px) auto auto 1fr;
+        }
+
+        &:nth-child(4) {
+            grid-template-rows: (31px - 2.5px) auto auto 1fr;
+        }
+
+        &:nth-child(5) {
+            grid-template-rows: (21px - 2.5px) auto auto 1fr;
+        }
+
+        &:nth-child(6) {
+            grid-template-rows: (50px - 2.5px) auto 1fr;
+        }
+    }
+
+    &__img {
+        border-radius: 8px;
+        transition: transform var(--transition-prop);
+
+        // доделать анимацию по ховеру, например, так
+
+        //@include desktop() {
+
+        //     &:hover {
+        //         transform: scale(110%);
+        //         z-index: 10;
+        //     }
+        // }
+    }
+
+}
