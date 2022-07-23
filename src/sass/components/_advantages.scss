@@ -1,0 +1,120 @@
+.advantages {
+    background-color: var(--bg-color-light);
+
+    padding-bottom: 60px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include tablet() {
+            flex-direction: row;
+            gap: 25px;
+        }
+
+        @include desktop() {
+            flex-direction: row;
+            gap: 112px;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 16px;
+    }
+
+    &__ammount {
+        margin-bottom: 4px;
+
+        font-family: 'Titan One';
+        color: var(--primary-color);
+
+        @include font(400, 36, 1.14, 0.04em);
+
+        @include tablet-only() {
+            margin-bottom: 13px;
+        }
+
+        @include desktop() {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        max-width: 230px;
+
+        font-family: 'DM Sans';
+
+        @include font(700, 12, 1.7, null);
+
+        @include tablet() {
+            width: 159px;
+        }
+
+        @include tablet() {
+            width: 288px;
+        }
+    }
+
+    &__icon {
+        fill: var(--accent-color);
+    }
+
+    &__milk-svg::before {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 50px;
+        background-image: url("../images/advantages-svg/milk.svg");
+        background-repeat: no-repeat;
+
+        margin-bottom: 16px;
+
+        @include tablet() {
+            margin-bottom: 36px;
+            }
+
+        @include desktop() {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__apples-svg::before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url("../images/advantages-svg/apples.svg");
+        background-repeat: no-repeat;
+
+        margin-bottom: 16px;
+
+        @include tablet() {
+            margin-bottom: 36px;
+        }
+
+        @include desktop() {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__heart-svg::before {
+        content: '';
+        display: block;
+        width: 44px;
+        height: 50px;
+        background-image: url("../images/advantages-svg/heart.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        margin-bottom: 16px;
+
+        @include tablet() {
+            margin-bottom: 36px;
+        }
+
+        @include desktop() {
+            margin-bottom: 40px;
+        }
+    }
+}
