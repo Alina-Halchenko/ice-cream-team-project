@@ -17,7 +17,7 @@
   overflow: auto;
 }
 
-   .menu__close-btn {
+   .menu__btn-close {
     display: block;
     margin-left: auto;
     top: 20px;
@@ -29,13 +29,14 @@
     fill: #fff;
    }
 
-   .buy__btn {
+   .menu__btn-buy {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 32px;
-    width: 209px;
-    height: 44px;
+    padding: 8px 16px;
+    min-width: 209px;
+    min-height: 44px;
     justify-content: center;
     align-items: center;
     border-radius: 22px;
@@ -53,11 +54,9 @@
     fill: currentColor;
    }
 
-   .nav__item:not(:last-child) {
-    margin-bottom: 23px;
-   }
-
+   
    .nav__link {
+    display: block;
     font-family: var(--font-main);
     font-weight: 700;
     font-size: 14px;
@@ -65,6 +64,12 @@
     color: #fff;
     &:active {
       color: var(--primary-color);
+    }
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid #E18298;
+    &:last-child {
+      border-bottom: 1px solid #E18298;;
     }
    }
 
