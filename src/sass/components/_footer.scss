@@ -151,6 +151,7 @@
 }
 
 .footer__copyright {
+  display: block;
   padding-top: 16px;
   padding-bottom: 3px;
   background-color: var(--bg-color-light);
@@ -175,9 +176,9 @@
   }
 }
 
-.footer__reserved.container {
-  @include tablet {
-    padding-left: 16px;
-    padding-right: 20px;
-  }
-}
+// .footer__reserved.container {
+//   @include tablet {
+//     padding-left: 16px;
+//     padding-right: 20px;
+//   }
+// }
