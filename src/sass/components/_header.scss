@@ -1,0 +1,15 @@
+.hero-header {
+    background-color: var(--bg-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 25px;
+}
+
+.header__open-btn {
+    border: none;
+    background-color: transparent;
+}
