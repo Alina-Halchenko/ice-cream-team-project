@@ -1,8 +1,14 @@
-.hero-header {
-    background-color: var(--bg-color);
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 184, 202, 0.4);
 }
 
-.header {
+// .header {
+//     background-color: var(--bg-color);
+// }
+
+.header__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 8px;
