@@ -12,5 +12,83 @@
       <a href="#about" class="hero__link hero__link--white">How it’s made?</a>
     </li>
   </ul>
-  <!-- <img src="../images/hero/ice-cream-mob.png" alt="ice-cream" width="171" /> -->
+  <ul class="department__list">
+    <li class="department__item--circle"></li>
+    <li class="department__item--number">16</li>
+    <li class="department__item--kind">cafes</li>
+    <li class="department__item--circle"></li>
+    <li class="department__item--number">23</li>
+    <li class="department__item--kind">food trucks</li>
+  </ul>
+  <p class="hero__text">
+    For the production of organic ice cream, we use only organic dairy products
+    of our own production, and comply with all the necessary rules.
+  </p>
+  <button type="button" class="hero__btn">
+    <svg class="hero__btn-icon" width="8" height="7">
+      <use href="./images/icons-sprite.svg#icon-arrow-right"></use>
+    </svg>
+  </button>
+  <picture>
+    <source
+      srcset="
+        ./images/hero/ice-cream-desk.png   1x,
+        ./images/hero/ice-cream-desk@2.png 2x
+      "
+      media="(min-width:1200px)"
+    />
+    <source
+      srcset="
+        ./images/hero/ice-cream-tab.png   1x,
+        ./images/hero/ice-cream-tab@2.png 2x
+      "
+      media="(min-width:768px)"
+    />
+    <source
+      srcset="
+        ./images/hero/ice-cream-mob.png   1x,
+        ./images/hero/ice-cream-mob@2.png 2x
+      "
+      media="(min-width:320px)"
+    />
+    <img
+      class="hero__img--ice-cream"
+      src="./images/hero/ice-cream-mob.png"
+      alt="ice-cream"
+      width="171"
+    />
+  </picture>
+  <span class="hero__circle"></span>
+  <picture>
+    <source
+      srcset="./images/hero/milk-desk.png 1x, ./images/hero/milk-desk@2.png 2x"
+      media="(min-width:1200px)"
+    />
+    <source
+      srcset="./images/hero/milk-tab.png 1x, ./images/hero/milk-tab@2.png 2x"
+      media="(min-width:768px)"
+    />
+    <img
+      class="hero__img--milk"
+      src="./images/hero/milk-desk.png"
+      alt="ice-cream"
+      width="171"
+    />
+  </picture>
+  <picture>
+    <source
+      srcset="./images/hero/girl-desk.png 1x, ./images/hero/girl-desk@2.png 2x"
+      media="(min-width:1200px)"
+    />
+    <source
+      srcset="./images/hero/girl-tab.png 1x, ./images/hero/girl-tab@2.png 2x"
+      media="(min-width:768px)"
+    />
+    <img
+      class="hero__img--girl"
+      src="./images/hero/girl-desk.png"
+      alt="ice-cream"
+      width="171"
+    />
+  </picture>
 </section>
