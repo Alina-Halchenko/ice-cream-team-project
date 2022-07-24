@@ -1,50 +1,50 @@
 //use @include font(400, 14, 1.71, 0.2) {...}
 @mixin font($fw, $fs, $lh, $ls) {
-    font-weight: $fw;
-    font-size: $fs;
-    line-height: $lh;
-    letter-spacing: $ls;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
 }
 
 //mixins for flex layout
 @mixin centered() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 //use @include retina() {...}
 @mixin retina() {
-    @media (min-device-pixel-ratio: 2),
-        (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        @content;
-    }
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
 }
 
 //mixins for @media
 //use, for example:  @include desktop() {...}
 @mixin mobile-only() {
-    @media screen and (min-width: $mobile) and (max-width: ($tablet - 1px)) {
-        @content;
-    }
+  @media screen and (min-width: $mobile) and (max-width: ($tablet - 0.1px)) {
+    @content;
+  }
 }
 
 @mixin tablet() {
-    @media screen and (min-width: $tablet) {
-        @content;
-    }
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
 }
 
 @mixin tablet-only() {
-    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-        @content;
-    }
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.1px)) {
+    @content;
+  }
 }
 
 @mixin desktop() {
-    @media screen and (min-width: $desktop) {
-        @content;
-    }
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
 }

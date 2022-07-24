@@ -1,0 +1,104 @@
+.advantages {
+    background-color: var(--bg-color-light);
+
+    padding-bottom: var(--section-padding);
+
+    &__list {
+        @include tablet() {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @include desktop() {
+            flex-direction: row;
+            gap: var(--gutter);
+        }
+    }
+
+    &__item {
+        @include desktop {
+            width: calc((100% - 64px) / 3);
+        }
+    }
+
+    &__item:not(:last-child) {
+        @include mobile-only() {
+            margin-bottom: var(--gutter);
+        }
+    }
+
+    &__icon {
+        margin-bottom: 16px;
+    }
+
+    &__amount {
+        margin-bottom: 4px;
+
+        font-family: var(--font-accent);
+        text-transform: lowercase;
+        color: var(--primary-color);
+
+        &::before {
+            content: "";
+            display: block;
+            margin-bottom: 16px;
+            width: 100%;
+
+            background-repeat: no-repeat;
+
+            @include tablet() {
+                margin-bottom: 36px;
+            }
+
+            @include desktop() {
+                margin-bottom: 40px;
+            }
+        }
+
+        @include font(400, 36, 1.14, 0.04em);
+
+        @include tablet-only() {
+            margin-bottom: 13px;
+            font-size: 48px;
+        }
+
+        @include desktop() {
+            margin-bottom: 16px;
+            font-size: 58px;
+        }
+    }
+
+    &__item:nth-child(1) &__amount::before {
+        height: 50px;
+        background-image: url("../images/advantages-svg/milk.svg");
+    }
+
+    &__item:nth-child(2) &__amount::before {
+        height: 50px;
+        background-image: url("../images/advantages-svg/apples.svg");
+    }
+
+    &__item:nth-child(3) &__amount::before {
+        height: 50px;
+        background-image: url("../images/advantages-svg/heart.svg");
+    }
+
+    &__text {
+        width: 230px;
+        padding-right: 15px;
+
+        font-family: "DM Sans";
+
+        @include font(700, 12, 1.7, null);
+
+        @include tablet-only() {
+            width: 180px;
+            font-size: 14px;
+        }
+
+        @include desktop() {
+            width: 305px;
+            font-size: 16px;
+        }
+    }
+}
