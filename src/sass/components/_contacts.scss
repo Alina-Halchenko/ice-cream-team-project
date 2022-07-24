@@ -1,4 +1,5 @@
 .contacts {
+  padding-top: var(--section-padding);
   background-image: linear-gradient(
     to bottom,
     var(--text-color-light) 24%,
@@ -45,8 +46,6 @@
 }
 
 .contacts__category--color {
-  padding-left: 28px;
-  padding-right: 28px;
   background-color: var(--product-color-third);
 }
 
