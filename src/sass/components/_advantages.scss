@@ -4,16 +4,25 @@
     padding-bottom: var(--section-padding);
 
     &__list {
-
         @include tablet() {
             display: flex;
-            flex-direction: row;
-            gap: 25px;
         }
 
         @include desktop() {
             flex-direction: row;
-            gap: 112px;
+            gap: var(--gutter);
+        }
+    }
+
+    &__item {
+        @include desktop {
+            width: calc((100% - 64px) / 3);
+        }
+    }
+
+    &__item:not(:last-child) {
+        @include mobile-only() {
+            margin-bottom: var(--gutter);
         }
     }
 
@@ -28,20 +37,21 @@
         color: var(--primary-color);
 
         &::before {
-            content: '';
-                display: block;
-                background-repeat: no-repeat;
-            
-                margin-bottom: 16px;
-            
-                @include tablet() {
-                    margin-bottom: 36px;
-                }
-            
-                @include desktop() {
-                    margin-bottom: 40px;
-                }
+            content: "";
+            display: block;
+            margin-bottom: 16px;
+            width: 100%;
+
+            background-repeat: no-repeat;
+
+            @include tablet() {
+                margin-bottom: 36px;
             }
+
+            @include desktop() {
+                margin-bottom: 40px;
+            }
+        }
 
         @include font(400, 36, 1.14, 0.04em);
 
@@ -55,41 +65,36 @@
     }
 
     &__item:nth-child(1) &__amount::before {
-        width: 33px;
         height: 50px;
         background-image: url("../images/advantages-svg/milk.svg");
     }
 
     &__item:nth-child(2) &__amount::before {
-        width: 50px;
         height: 50px;
         background-image: url("../images/advantages-svg/apples.svg");
     }
 
     &__item:nth-child(3) &__amount::before {
-        width: 44px;
         height: 50px;
         background-image: url("../images/advantages-svg/heart.svg");
     }
 
     &__text {
-        max-width: 230px;
+        width: 230px;
+        padding-right: 15px;
 
-        font-family: 'DM Sans';
+        font-family: "DM Sans";
 
         @include font(700, 12, 1.7, null);
 
-        @include tablet() {
-            width: 159px;
+        @include tablet-only() {
+            width: 180px;
+            font-size: 14px;
         }
 
-        @include tablet() {
-            width: 288px;
-        }
-    }
-
-    &__item:not(:last-child) &__text {
-        @include mobile-only() {margin-bottom: var(--gutter);
+        @include desktop() {
+            max-width: 305px;
+            font-size: 14px;
         }
     }
 }
