@@ -1,0 +1,200 @@
+.about {
+  padding-bottom: 40px;
+  padding-top: var(--section-padding);
+  background-color: var(--bg-color-light);
+
+  @include tablet-only {
+    padding-bottom: var(--section-padding);
+  }
+  @include desktop {
+    padding-bottom: 81px;
+  }
+}
+
+.about__label {
+  margin-bottom: 15px;
+
+  font-family: var(--font-accent);
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+
+  @include tablet {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.04em;
+  }
+}
+.about__title {
+  margin-bottom: 32px;
+
+  font-family: var(--font-accent);
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
+
+  @include tablet {
+    margin-bottom: 40px;
+    font-size: 48px;
+  }
+  @include desktop {
+    margin-bottom: 60px;
+
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+}
+.about__wrap {
+  background-image: url(../images/about/milk-bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right 395px;
+
+  @media screen and (min-width: 330px) {
+    background-position: right 380px;
+  }
+  @media screen and (min-width: 403px) {
+    background-position: right 357px;
+  }
+  
+  @include retina {
+    background-image: url(../images/about/milk-bg-mob@2.png);
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+
+  }
+  @include tablet {
+    background-image: none;
+  }
+
+  @include desktop {
+    background-image: url(../images/about/milk-bg-desk.png);
+    background-size: 100%;
+    background-position: right top;
+
+    @include retina {
+      background-image: url(../images/about/milk-bg-desk@2.png);
+    }
+  }
+}
+.about__column img {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include tablet-only {
+    min-width: 336px;
+  }
+  @include desktop {
+    min-width: 501px;
+  }
+}
+
+.about__column--first {
+  margin-bottom: 40px;
+
+  @include tablet-only {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-right: 99px;
+  }
+}
+.about__column--second {
+  @include mobile-only {
+    padding-right: 60px;
+  }
+
+  @include desktop {
+    padding-top: 90px;
+    padding-right: 105px;
+  }
+
+}
+.about__paragraph {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  font-family: var(--font-main);
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+}
+
+.about__paragraph--first {
+  color: var(--text-color-main);
+  margin-bottom: 32px;
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.about__paragraph--second {
+  color: var(--text-color-accent);
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    line-height: 1.94;
+  }
+}
+.about__ending {
+  display: block;
+  margin-top: 15px;
+}
+.about__button {
+  position: relative;
+  display: block;
+
+  background-color: var(--text-color-light);
+  padding-left: 37px;
+  min-width: 176px;
+  height: 44px;
+
+  font-family: var(--font-main);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  border: 0;
+  border-radius: 22px;
+  text-align: left;
+  cursor: pointer;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.31;
+  }
+
+  .about__icon {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+
+    fill: currentColor;
+    border: 2px solid var(--primary-color);
+  }
+}

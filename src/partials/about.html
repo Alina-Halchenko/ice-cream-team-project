@@ -1,1 +1,43 @@
 <!-- About -->
+<section class="about" id="how-its-made">
+  <div class="container">
+    <p class="section__suptitle about__label">tradition and love</p>
+    <h2 class="section__title about__title">how it’s made?</h2>
+    <div class="about__wrap">
+
+      <div class="about__column about__column--first">
+        <picture>
+          <source type="image/png"
+          srcset="
+          ./images/about/cow-desk.png     1x,
+          ./images/about/cow-desk@2.png   2x
+          "
+          media="(min-width: 1200px)"/>
+        <source type="image/png"
+          srcset="
+          ./images/about/cow-tab.png    1x,
+          ./images/about/cow-tab@2.png  2x
+          "
+          media="(min-width: 768px)"/>
+        <source type="image/png"
+          srcset="
+          ./images/about/cow-mob.png     1x,
+          ./images/about/cow-mob@2.png   2x
+          "
+          media="(width: 320px)"/>
+        <img src="./images/about/cow-mob.png" alt="cow with the pitcher of milk"/>
+        </picture>
+      </div>
+
+      <div class="about__column about__column--second">
+        <p class="about__paragraph about__paragraph--first">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.</p>
+        <p class="about__paragraph about__paragraph--second">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.<span class="about__ending"> Aliquam erat volutpat. Aenean accumsan.</span></p>
+        <button class="about__button" type="button">Read more
+          <svg class="about__icon" width="4.43px" height="8px">
+            <use href="./images/icons-sprite.svg#icon-arrow-right-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
