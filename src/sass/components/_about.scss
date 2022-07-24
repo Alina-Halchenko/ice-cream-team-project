@@ -10,7 +10,9 @@
     padding-bottom: 81px;
     overflow: hidden;
   }
+}
 
+.about .container {
   @include desktop {
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
