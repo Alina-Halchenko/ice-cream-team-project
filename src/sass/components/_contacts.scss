@@ -1,3 +1,10 @@
+.contacts-box.container {
+  @include tablet() {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .contacts {
   padding-top: var(--section-padding);
   background-image: linear-gradient(
@@ -5,30 +12,77 @@
     var(--text-color-light) 24%,
     var(--bg-color-light) 24%
   );
+
+  @include tablet() {
+    background-image: linear-gradient(
+      to bottom,
+      var(--text-color-light) 51%,
+      var(--bg-color-light) 51%
+    );
+  }
+
+  @include desktop() {
+    background-image: linear-gradient(
+      to bottom,
+      var(--text-color-light) 24%,
+      var(--bg-color-light) 24%
+    );
+  }
 }
 
 .contacts__list {
-  min-width: 280px;
   width: 100%;
   margin-bottom: 32px;
+
+  @include tablet() {
+    display: flex;
+    gap: 32px;
+
+    margin-bottom: 60px;
+  }
+
+  @include desktop() {
+    justify-content: center;
+  }
 }
 
 .contacts__card:not(:last-child) {
   margin-bottom: 20px;
+
+  @include tablet() {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__card {
+  min-width: 280px;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 32px;
   padding-right: 32px;
+
   background: var(--text-color-light);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+
+  @include tablet() {
+    min-width: 224px;
+  }
+
+  @include desktop() {
+    min-width: 368px;
+    padding: 40px;
+  }
 }
 
 .contacts__paragraph {
   margin-bottom: 24px;
+
+  @include tablet() {
+    max-width: 224px;
+
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__category {
@@ -42,21 +96,51 @@
   text-align: center;
   border-radius: 4px;
   color: var(--text-color-light);
+
+  @include tablet() {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 32px;
+
+    @include font(none, 16px, none, none);
+  }
+}
+
+.contacts__category--cafe {
   background-color: var(--product-color-second);
 }
 
-.contacts__category--color {
+.contacts__category--foodtruck {
   background-color: var(--product-color-third);
 }
 
 .contacts__address {
   margin-bottom: 8px;
   @include font(500, 12px, 1.86, 0.04em);
+
+  @include tablet() {
+    margin-bottom: 12px;
+    @include font(none, 14px, none, none);
+  }
+
+  @include desktop() {
+    margin-bottom: 8px;
+
+    @include font(none, 16px, none, none);
+  }
 }
 
 .contacts__text {
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
+
+  @include tablet() {
+    @include font(none, 14px, 1.66, none);
+  }
+
+  @include desktop() {
+    @include font(none, 16px, 1.83, none);
+  }
 }
 
 .contacts__timetable {
@@ -65,19 +149,58 @@
   margin-bottom: 24px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
+
+  @include tablet() {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__day {
   @include font(500, 12px, 1.86, 0.04em);
+
+  @include tablet() {
+    @include font(none, 14px, none, none);
+  }
+
+  @include desktop() {
+    @include font(none, 16px, none, none);
+  }
 }
+
 .contacts__time {
   @include font(500, 12px, 1.86, 0.04em);
   color: var(--accent-color);
+
+  @include tablet() {
+    @include font(none, 14px, none, none);
+  }
+
+  @include desktop() {
+    @include font(none, 16px, none, none);
+  }
+}
+
+.contacts__time:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include tablet() {
+    margin-bottom: 12px;
+  }
 }
 
 .contacts__link {
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
+
+  @include tablet() {
+    @include font(none, 14px, 1.83, none);
+  }
+
+  @include desktop() {
+    @include font(none, 16px, none, none);
+  }
 }
 
 .contacts__btn-list {
@@ -85,6 +208,16 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+
+  @include tablet() {
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  @include tablet() {
+    gap: 12px;
+  }
 }
 
 .contacts__btn {
@@ -102,6 +235,24 @@
   background-color: var(--text-color-light);
 
   transition: background-color var(--transition-prop);
+
+  @include tablet() {
+    min-width: 191px;
+  }
+
+  @include desktop() {
+    min-width: 198px;
+  }
+}
+
+.contacts__btn--width {
+  @include tablet() {
+    min-width: 174px;
+  }
+
+  @include desktop() {
+    min-width: 168px;
+  }
 }
 
 .contacts__btn-icon {
