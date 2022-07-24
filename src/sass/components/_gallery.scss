@@ -1,12 +1,11 @@
 .gallery {
-    background-image: linear-gradient(to bottom, var(--bg-color-light) 20%, #ffffff 20%);
-
-    @include desktop() {
-        padding: 60px 0;
-    }
+    background-image: linear-gradient(
+        to bottom,
+        var(--bg-color-light) 20%,
+        #ffffff 20%
+    );
 
     &__grid {
-        
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr) 2fr repeat(3, 1fr);
@@ -25,7 +24,6 @@
             max-width: 1013px;
             gap: 8px;
         }
-
     }
 
     &__item {
@@ -44,16 +42,12 @@
         }
 
         @mixin rows($gapCellHeight, $screen: m) {
-
             $gap: 2.5px;
-            
 
             @if $screen == t {
                 $gap: 6px;
                 grid-template-rows: ($gapCellHeight - $gap) auto auto 1fr;
-            }
-
-            @else if $screen == d {
+            } @else if $screen == d {
                 $gap: 8px;
                 grid-template-rows: ($gapCellHeight - $gap) auto auto 1fr;
             }
@@ -63,7 +57,7 @@
 
         &:nth-child(1) {
             @include rows(45px);
-                        
+
             @include tablet-only() {
                 @include rows(109px, t);
             }
@@ -75,11 +69,11 @@
 
         &:nth-child(2) {
             @include rows(28px);
-            
+
             @include tablet-only() {
                 @include rows(68px, t);
             }
-            
+
             @include desktop() {
                 @include rows(89px, d);
             }
@@ -91,7 +85,7 @@
             @include tablet-only() {
                 @include rows(75px, t);
             }
-            
+
             @include desktop() {
                 @include rows(99px, d);
             }
@@ -103,7 +97,7 @@
             @include tablet-only() {
                 @include rows(51px, t);
             }
-            
+
             @include desktop() {
                 @include rows(66px, d);
             }
@@ -115,36 +109,31 @@
             @include tablet-only() {
                 @include rows(118px, t);
             }
-            
+
             @include desktop() {
                 @include rows(155px, d);
             }
         }
     }
 
-
     &__img {
-        
         transition: transform var(--transition-prop);
 
         & img {
-            
             @include mobile-only() {
-            border-radius: 8px;
+                border-radius: 8px;
             }
 
             @include tablet() {
                 border-radius: 20px;
             }
         }
-        
 
         @include desktop() {
-
             &:hover {
                 transform: scale(115%);
                 z-index: 10;
-            }            
+            }
         }
     }
 }
