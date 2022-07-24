@@ -1,0 +1,15 @@
+.header {
+    background-color: var(--bg-color);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.header__btn-open {
+    border: none;
+    background-color: transparent;
+}
