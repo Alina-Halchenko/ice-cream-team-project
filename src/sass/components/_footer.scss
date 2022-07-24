@@ -11,6 +11,10 @@
     padding-left: 16px;
     padding-right: 20px;
   }
+
+  @include desktop() {
+    padding-bottom: 60px;
+  }
 }
 
 .footer__slogan {
@@ -24,7 +28,7 @@
   }
 }
 
-.footer__slogan-suptitle {
+.footer__slogan-subtitle {
   font-family: var(--font-accent);
   font-style: normal;
   font-weight: 400;
@@ -88,6 +92,11 @@
 .footer__soc-item {
   width: 32px;
   height: 32px;
+
+  @include tablet() {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .footer__soc-link {
