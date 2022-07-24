@@ -8,6 +8,7 @@
   }
   @include desktop {
     padding-bottom: 81px;
+    overflow: hidden;
   }
 }
 
@@ -59,6 +60,8 @@
   }
 }
 .about__wrap {
+  // min-width: 280px;
+
   background-image: url(../images/about/milk-bg-mob.png);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -70,7 +73,7 @@
   @media screen and (min-width: 403px) {
     background-position: right 357px;
   }
-  
+
   @include retina {
     background-image: url(../images/about/milk-bg-mob@2.png);
   }
@@ -78,7 +81,6 @@
   @include tablet {
     display: flex;
     flex-direction: row;
-
   }
   @include tablet {
     background-image: none;
@@ -126,7 +128,6 @@
     padding-top: 90px;
     padding-right: 105px;
   }
-
 }
 .about__paragraph {
   font-weight: 500;
@@ -138,7 +139,6 @@
     font-size: 14px;
     line-height: 1.76;
   }
-
 }
 
 .about__paragraph--first {
@@ -170,7 +170,7 @@
   display: block;
 
   background-color: var(--text-color-light);
-  padding-left: 37px;
+  padding: 14px 35px;
   min-width: 176px;
   height: 44px;
 
