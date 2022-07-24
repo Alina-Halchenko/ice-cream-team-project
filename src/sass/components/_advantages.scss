@@ -87,7 +87,7 @@
             width: 288px;
         }
     }
-
+    
     &__item:not(:last-child) &__text {
         margin-bottom: var(--gutter);
     }
