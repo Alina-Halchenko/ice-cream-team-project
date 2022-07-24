@@ -1,0 +1,150 @@
+.gallery {
+    background-image: linear-gradient(to bottom, var(--bg-color-light) 20%, #ffffff 20%);
+
+    @include desktop() {
+        padding: 60px 0;
+    }
+
+    &__grid {
+        
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) 2fr repeat(3, 1fr);
+
+        @include mobile-only() {
+            max-width: $mobile;
+            gap: 2.5px;
+        }
+
+        @include tablet-only() {
+            max-width: $tablet;
+            gap: 6px;
+        }
+
+        @include desktop() {
+            max-width: 1013px;
+            gap: 8px;
+        }
+
+    }
+
+    &__item {
+        display: grid;
+
+        @include mobile-only() {
+            gap: 2.5px;
+        }
+
+        @include tablet-only() {
+            gap: 6px;
+        }
+
+        @include desktop() {
+            gap: 8px;
+        }
+
+        @mixin rows($gapCellHeight, $screen: m) {
+
+            $gap: 2.5px;
+            
+
+            @if $screen == t {
+                $gap: 6px;
+                grid-template-rows: ($gapCellHeight - $gap) auto auto 1fr;
+            }
+
+            @else if $screen == d {
+                $gap: 8px;
+                grid-template-rows: ($gapCellHeight - $gap) auto auto 1fr;
+            }
+
+            grid-template-rows: ($gapCellHeight - $gap) auto auto 1fr;
+        }
+
+        &:nth-child(1) {
+            @include rows(45px);
+                        
+            @include tablet-only() {
+                @include rows(109px, t);
+            }
+
+            @include desktop() {
+                @include rows(142px, d);
+            }
+        }
+
+        &:nth-child(2) {
+            @include rows(28px);
+            
+            @include tablet-only() {
+                @include rows(68px, t);
+            }
+            
+            @include desktop() {
+                @include rows(89px, d);
+            }
+        }
+
+        &:nth-child(4) {
+            @include rows(31px);
+
+            @include tablet-only() {
+                @include rows(75px, t);
+            }
+            
+            @include desktop() {
+                @include rows(99px, d);
+            }
+        }
+
+        &:nth-child(5) {
+            @include rows(21px);
+
+            @include tablet-only() {
+                @include rows(51px, t);
+            }
+            
+            @include desktop() {
+                @include rows(66px, d);
+            }
+        }
+
+        &:nth-child(6) {
+            @include rows(50px);
+
+            @include tablet-only() {
+                @include rows(118px, t);
+            }
+            
+            @include desktop() {
+                @include rows(155px, d);
+            }
+        }
+    }
+
+
+    &__img {
+        
+        transition: transform var(--transition-prop);
+
+        & img {
+            
+            @include mobile-only() {
+            border-radius: 8px;
+            }
+
+            @include tablet() {
+                border-radius: 20px;
+            }
+        }
+        
+
+        @include desktop() {
+
+            &:hover {
+                transform: scale(115%);
+                z-index: 10;
+            }            
+        }
+    }
+}
