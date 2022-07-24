@@ -1,0 +1,46 @@
+.section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.section__title {
+    margin-bottom: 20px;
+
+    font-family: "Titan One";
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+
+    @include tablet-only {
+        font-size: 48px;
+    }
+
+    @include desctop {
+        font-size: 58px;
+        line-height: 1.14;
+    }
+}
+
+.section__subtitle {
+    margin-bottom: 16px;
+
+    font-family: "Titan One";
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent-color);
+
+    @include tablet-only {
+        font-size: 26px;
+        line-height: 1.15;
+    }
+
+    @include desctop {
+        font-size: 30px;
+        line-height: 1.13;
+    }
+}

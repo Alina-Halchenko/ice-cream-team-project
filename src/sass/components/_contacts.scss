@@ -1,0 +1,123 @@
+.contacts {
+  padding-top: var(--section-padding);
+  background-image: linear-gradient(
+    to bottom,
+    var(--text-color-light) 24%,
+    var(--bg-color-light) 24%
+  );
+}
+
+.contacts__list {
+  min-width: 280px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.contacts__card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts__card {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background: var(--text-color-light);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts__paragraph {
+  margin-bottom: 24px;
+}
+
+.contacts__category {
+  display: inline-block;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 20px;
+
+  @include font(500, 12px, 1.86, 0.04em);
+  text-align: center;
+  border-radius: 4px;
+  color: var(--text-color-light);
+  background-color: var(--product-color-second);
+}
+
+.contacts__category--color {
+  background-color: var(--product-color-third);
+}
+
+.contacts__address {
+  margin-bottom: 8px;
+  @include font(500, 12px, 1.86, 0.04em);
+}
+
+.contacts__text {
+  @include font(500, 12px, 1.5, 0.04em);
+  color: var(--text-color-accent);
+}
+
+.contacts__timetable {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.contacts__day {
+  @include font(500, 12px, 1.86, 0.04em);
+}
+.contacts__time {
+  @include font(500, 12px, 1.86, 0.04em);
+  color: var(--accent-color);
+}
+
+.contacts__link {
+  @include font(500, 12px, 1.5, 0.04em);
+  color: var(--text-color-accent);
+}
+
+.contacts__btn-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts__btn {
+  @include centered;
+
+  min-width: 161px;
+  min-height: 44px;
+  padding: 12px;
+
+  border-style: none;
+  border-radius: 22px;
+
+  @include font(500, var(--font-size), 1.31, 0.04em);
+  color: var(--btn-primary-color);
+  background-color: var(--text-color-light);
+
+  transition: background-color var(--transition-prop);
+}
+
+.contacts__btn-icon {
+  fill: var(--btn-primary-color);
+  transition: background-color var(--transition-prop);
+}
+
+.contacts__btn-icon {
+  margin-left: 8px;
+}
+
+.contacts__btn:hover {
+  color: var(--text-color-light);
+  background-color: var(--btn-primary-color);
+}
+
+.contacts__btn:hover .contacts__btn-icon {
+  fill: var(--text-color-light);
+}
