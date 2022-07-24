@@ -6,6 +6,7 @@
     &__list {
         @include tablet() {
             display: flex;
+            flex-wrap: wrap;
         }
 
         @include desktop() {
@@ -34,6 +35,7 @@
         margin-bottom: 4px;
 
         font-family: var(--font-accent);
+        text-transform: lowercase;
         color: var(--primary-color);
 
         &::before {
@@ -57,10 +59,12 @@
 
         @include tablet-only() {
             margin-bottom: 13px;
+            font-size: 48px;
         }
 
         @include desktop() {
             margin-bottom: 16px;
+            font-size: 58px;
         }
     }
 
@@ -93,8 +97,8 @@
         }
 
         @include desktop() {
-            max-width: 305px;
-            font-size: 14px;
+            width: 305px;
+            font-size: 16px;
         }
     }
 }
