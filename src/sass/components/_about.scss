@@ -10,6 +10,17 @@
     padding-bottom: 81px;
     overflow: hidden;
   }
+
+  @include desktop {
+    background-image: url(../images/about/milk-bg-desk.png);
+    background-size: 100% 241px;
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @include retina {
+      background-image: url(../images/about/milk-bg-desk@2.png);
+    }
+  }
 }
 
 .about__label {
@@ -84,16 +95,6 @@
   }
   @include tablet {
     background-image: none;
-  }
-
-  @include desktop {
-    background-image: url(../images/about/milk-bg-desk.png);
-    background-size: 100%;
-    background-position: right top;
-
-    @include retina {
-      background-image: url(../images/about/milk-bg-desk@2.png);
-    }
   }
 }
 .about__column img {
