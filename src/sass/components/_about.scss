@@ -10,9 +10,7 @@
     padding-bottom: 81px;
     overflow: hidden;
   }
-}
 
-.about .container {
   @include desktop {
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
@@ -24,6 +22,10 @@
     }
   }
 }
+
+// .about .container {
+
+// }
 
 .about__label {
   margin-bottom: 15px;
@@ -73,7 +75,7 @@
   }
 }
 .about__wrap {
-  // min-width: 280px;
+  min-width: 280px;
 
   background-image: url(../images/about/milk-bg-mob.png);
   background-repeat: no-repeat;
