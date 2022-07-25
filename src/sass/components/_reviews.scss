@@ -1,0 +1,185 @@
+.reviews {
+  padding-top: var(--section-padding);
+}
+
+.container {
+  outline: solid 1px #c7133e;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include tablet {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  @include desktop {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
+.reviews__img {
+  height: 85px;
+  border-radius: 44px;
+  margin: 0 auto 32px auto;
+  @include tablet {
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.reviews__thumb {
+  position: relative;
+  width: 100%;
+  min-height: 308px;
+  background-color: #fafafa;
+  margin-bottom: 32px;
+  &::after {
+    content: '. . .';
+    display: block;
+    position: absolute;
+    top: 312px;
+    left: 48%;
+    height: 4px;
+    color: #c7133e;
+  }
+  @include tablet {
+    min-height: 164px;
+    background-color: rgba(250, 250, 250, 0.4);
+    //opacity: 0.4;
+    margin-bottom: 24px;
+    &::after {
+      content: '. . .';
+      top: 168px;
+      left: 48%;
+      height: 4px;
+      color: #c7133e;
+    }
+  }
+  @include desktop {
+    min-height: 138px;
+    background-color: #fafafa;
+    margin-bottom: 36px;
+    &::after {
+      content: '. . .';
+      top: 142px;
+      left: 48%;
+      height: 4px;
+      color: #c7133e;
+    }
+  }
+}
+
+.reviews__line {
+  display: block;
+  position: absolute;
+  top: 43px;
+  left: 50px;
+  right: 50px;
+  min-height: 265px;
+  background-image: repeating-linear-gradient(
+    #fafafa,
+    #fafafa 31px,
+    #e1e1e1 31px,
+    #e1e1e1 32px,
+    #fafafa 32px
+  );
+  @include tablet {
+    top: 38px;
+    left: 6px;
+    right: 6px;
+    min-height: 127px;
+    background-image: repeating-linear-gradient(
+      rgba(250, 250, 250, 0.4),
+      rgba(250, 250, 250, 0.4) 30px,
+      #e1e1e1 30px,
+      #e1e1e1 31px,
+      rgba(250, 250, 250, 0.4) 31px
+    );
+  }
+  @include desktop {
+    top: 45px;
+    left: 73px;
+    right: 74px;
+    min-height: 93px;
+    background-image: repeating-linear-gradient(
+      #fafafa,
+      #fafafa 31px,
+      #e1e1e1 31px,
+      #e1e1e1 32px,
+      #fafafa 32px
+    );
+  }
+}
+
+.reviews__text {
+  display: block;
+  position: relative;
+  width: 157px;
+  margin-right: auto;
+  margin-left: auto;
+  @include font(500, 12px, 2.55, 0);
+  text-align: center;
+  color: var(--text-color-main);
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: -13px;
+    top: -12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews/quotes.png);
+  }
+  @include tablet {
+    padding: 0;
+    width: 514px;
+    @include font(500, 14px, 2.16, 0.04);
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: -45px;
+      top: -17px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 60.35px;
+      background-image: url(../images/reviews/quotes.png);
+    }
+  }
+  @include desktop {
+    width: 750px;
+    @include font(500, 16px, 1.86, 0.04);
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: -37px;
+      top: -15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 54px;
+      background-image: url(../images/reviews/quotes.png);
+    }
+  }
+}
+
+.reviews__name {
+  @include font(500, 14px, 1.86, 0);
+  text-align: center;
+  color: var(--text-color-main);
+  @include tablet {
+    @include font(500, 16px, 1.86, 0);
+  }
+  @include desktop {
+    @include font(500, 20px, 1.86, 0);
+  }
+}
+
+.reviews__list {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
