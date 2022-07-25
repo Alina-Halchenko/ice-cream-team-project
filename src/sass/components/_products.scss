@@ -263,18 +263,30 @@
   &:hover,
   &:focus {
     border: 1px solid var(--btn-primary-color);
+
+    & svg {
+      transition: --transition-prop;
+    }
+
+    &.arrow-turned svg{
+      transform: rotateX(180deg);
+    }
   }
 }
 
 .description {
   position: absolute;
   z-index: 1;
-
-  transform: translateY(156%);
+  
+  transform: translateY(0);
 
   transition: var(--transition-prop);
 
   width: calc(100% - 50px);
+
+  .products--hidden-description & {
+    transform: translateY(156%);
+  }
 
   @media screen and (min-width: 428px) {
     padding: 0;
@@ -419,6 +431,6 @@
   }
 }
 
-.products__item-wrapper:hover .description {
-  transform: translateY(0);
-}
+// .products__item-wrapper:hover .description {
+//   transform: translateY(0);
+// }
