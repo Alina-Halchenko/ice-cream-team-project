@@ -250,7 +250,8 @@
 }
 
 .products__btn {
-  display: block;
+  display: flex;
+  @include centered();
   margin-left: auto;
   margin-right: auto;
   width: 40px;
@@ -263,30 +264,34 @@
   &:hover,
   &:focus {
     border: 1px solid var(--btn-primary-color);
+  }
+}
 
-    & svg {
-      transition: --transition-prop;
-    }
+.products__btn-icon {
+  fill: var(--btn-primary-color);
 
-    &.arrow-turned svg{
-      transform: rotateX(180deg);
-    }
+  transform: rotate(0);
+
+  transition: transform var(--transition-prop);
+
+  .arrow--turned & {
+    transform: rotate(0.5turn);
   }
 }
 
 .description {
   position: absolute;
   z-index: 1;
-  
-  transform: translateY(0);
+
+  transform: translateX(-128%);
+
+  .products--hidden-description & {
+    transform: translateX(0);
+  }
 
   transition: var(--transition-prop);
 
   width: calc(100% - 50px);
-
-  .products--hidden-description & {
-    transform: translateY(156%);
-  }
 
   @media screen and (min-width: 428px) {
     padding: 0;
@@ -327,7 +332,7 @@
   width: 230px;
   height: 100%;
 
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 .description--ice-cream::after {
@@ -386,12 +391,46 @@
   }
 }
 
+.description--milkshakes::after {
+  opacity: 0.7;
+
+  background-image: url(../images/products/milk-mob.png);
+  background-size: 145px 180px;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url(../images/products/milk-mob@2.png);
+  }
+
+  @include tablet() {
+    background-image: url(../images/products/milk-tab.png);
+    background-size: 204px 240px;
+
+    @include retina {
+      background-image: url(../images/products/milk-tab@2.png);
+    }
+  }
+
+  @include desktop() {
+    background-image: url(../images/products/milk-desk.png);
+    background-size: 242px 273px;
+
+    @include retina {
+      background-image: url(../images/products/milk-desk@2.png);
+    }
+  }
+}
+
 .description__list--ice-cream {
-  color: var(--primary-color);
+  color: #f34c4c;
 }
 
 .description__list--ice-coffee {
-  color: #f86300;
+  color: #fba715;
+}
+
+.description__list--ice-coffee li {
+  padding-bottom: 5px;
 }
 
 .description__list--milkshakes {
@@ -399,6 +438,10 @@
 }
 
 .description__item {
+  position: relative;
+  z-index: 1;
+
+  -webkit-text-stroke: 1px #0000004e;
   text-align: center;
   font-family: var(--font-accent);
 
@@ -430,7 +473,3 @@
     letter-spacing: 1px;
   }
 }
-
-// .products__item-wrapper:hover .description {
-//   transform: translateY(0);
-// }
