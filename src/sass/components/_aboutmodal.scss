@@ -1,0 +1,104 @@
+.aboutmodal__backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(255, 245, 246, 0.7);
+  transition: opacity var(--transition-prop), visibility var(--transition-prop);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.aboutmodal {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-height: 570px;
+  background-color: var(--text-color-light);
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border-radius: 24px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-prop);
+  .is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  @media screen and (min-width: 480px) {
+    width: 400px;
+  }
+  @include desktop {
+    padding: 32px;
+    width: 500px;
+  }
+}
+
+.aboutmodal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  background-color: var(--text-color-light);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color var(--transition-prop),
+    color var(--transition-prop);
+  &:hover {
+    background-color: var(--btn-accent-color);
+    color: var(--primary-color);
+  }
+}
+
+.aboutmodal__close-icon {
+  stroke: currentColor;
+}
+
+.aboutmodal__title {
+  margin-bottom: 15px;
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  @include font(500, 18px, 1.17, 0.04em);
+  color: var(--accent-color);
+  text-align: left;
+  @include tablet {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+  @include desktop {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.aboutmodal__text {
+  font-family: var(--font-main);
+  @include font(500, 12px, 1.62, 0);
+  color: var(--text-color-accent);
+  text-align: justify;
+  text-indent: 20px;
+  @include tablet {
+    @include font(500, 14px, 1.76, 0.04em);
+  }
+  @include desktop {
+    line-height: 1.94;
+  }
+}
+
+.aboutmodal__img {
+  bottom: 5;
+  margin-left: calc(50% - 80px);
+}
