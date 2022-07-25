@@ -1,34 +1,86 @@
+.contacts .container {
+  @include tablet-only() {
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+  }
+}
+
 .contacts {
   padding-top: var(--section-padding);
   background-image: linear-gradient(
     to bottom,
-    var(--text-color-light) 24%,
+    #ffffff 24%,
     var(--bg-color-light) 24%
   );
+
+  @include tablet-only() {
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 51%,
+      var(--bg-color-light) 51%
+    );
+  }
+
+  @include desktop() {
+    background-image: linear-gradient(
+      to bottom,
+      #ffffff 24%,
+      var(--bg-color-light) 24%
+    );
+  }
 }
 
 .contacts__list {
-  min-width: 280px;
   width: 100%;
   margin-bottom: 32px;
-}
 
-.contacts__card:not(:last-child) {
-  margin-bottom: 20px;
+  @include tablet() {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
+
+    margin-bottom: 60px;
+  }
+
+  @include desktop() {
+    justify-content: center;
+  }
 }
 
 .contacts__card {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
+
   background: var(--text-color-light);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+
+  @include mobile-only() {
+    min-width: 280px;
+  }
+
+  @include tablet() {
+    width: calc((100% - (var(--gutter) * 2)) / 3);
+  }
+
+  @include desktop() {
+    padding: 40px;
+  }
+
+  &:not(:last-child) {
+    @include mobile-only() {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .contacts__paragraph {
   margin-bottom: 24px;
+
+  @include tablet() {
+    max-width: 224px;
+
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__category {
@@ -42,21 +94,53 @@
   text-align: center;
   border-radius: 4px;
   color: var(--text-color-light);
+
+  @include tablet() {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 32px;
+
+    font-size: var(--font-size);
+  }
+}
+
+.contacts__category--cafe {
   background-color: var(--product-color-second);
 }
 
-.contacts__category--color {
+.contacts__category--foodtruck {
   background-color: var(--product-color-third);
 }
 
 .contacts__address {
   margin-bottom: 8px;
   @include font(500, 12px, 1.86, 0.04em);
+
+  @include tablet-only() {
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+
+  @include desktop() {
+    margin-bottom: 8px;
+
+    font-size: var(--font-size);
+  }
 }
 
 .contacts__text {
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
+
+  @include tablet-only() {
+    font-size: 14px;
+    line-height: 1.66;
+  }
+
+  @include desktop() {
+    font-size: var(--font-size);
+    line-height: 1.83;
+  }
 }
 
 .contacts__timetable {
@@ -65,19 +149,58 @@
   margin-bottom: 24px;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
+
+  @include tablet() {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__day {
   @include font(500, 12px, 1.86, 0.04em);
+
+  @include tablet-only() {
+    font-size: 14px;
+  }
+
+  @include desktop() {
+    font-size: var(--font-size);
+  }
 }
+
 .contacts__time {
   @include font(500, 12px, 1.86, 0.04em);
   color: var(--accent-color);
+
+  @include tablet-only() {
+    font-size: 14px;
+  }
+
+  @include desktop() {
+    font-size: var(--font-size);
+  }
+}
+
+.contacts__time:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include tablet() {
+    margin-bottom: 12px;
+  }
 }
 
 .contacts__link {
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
+
+  @include tablet-only() {
+    font-size: 14px;
+  }
+
+  @include desktop() {
+    font-size: var(--font-size);
+  }
 }
 
 .contacts__btn-list {
@@ -85,6 +208,16 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+
+  @include tablet() {
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  @include desktop() {
+    gap: 12px;
+  }
 }
 
 .contacts__btn {
@@ -102,6 +235,24 @@
   background-color: var(--text-color-light);
 
   transition: background-color var(--transition-prop);
+
+  @include tablet-only() {
+    min-width: 191px;
+  }
+
+  @include desktop() {
+    min-width: 198px;
+  }
+}
+
+.contacts__btn--width {
+  @include tablet-only() {
+    min-width: 174px;
+  }
+
+  @include desktop() {
+    min-width: 168px;
+  }
 }
 
 .contacts__btn-icon {
