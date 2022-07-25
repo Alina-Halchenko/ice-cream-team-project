@@ -1,8 +1,8 @@
 .menu {
   position: fixed;
-  background-color: #e17992;
   top: 0;
   right: 0;
+  background-color: #e17992;
   z-index: 100;
   width: 100vw;
   height: 100vh;
@@ -11,17 +11,9 @@
     width: 40%;
     padding-right: 32px; 
   }
-
-  // @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //   width: 40%;
-  //   padding-right: 32px;
-  //  }
   @include desktop() {
     display: none;
   }
-  //  @media screen and (min-width: 1200px) {
-  //   display: none;
-  //  }
 }
 
 .mobile-container {
@@ -32,16 +24,18 @@
 }
 
 .menu__btn-close {
-  margin-left: auto;
   top: 20px;
   right: 0;
+  margin-left: auto;
   margin-bottom: 26px;
-  // padding: 8px;
-
+  transition: transform 300ms linear;
   border: none;
   background-color: transparent;
-  fill: #fff;
+  &:hover, &:focus {
+   transform: rotate(-90deg); 
+  }
 }
+
 .menu__close-icon {
   stroke: #fff;
 }
@@ -64,12 +58,14 @@
 }
 
 .buy__btn-arrow {
-  stroke: var(--primary-color);
   margin-left: 16px;
+  stroke: var(--primary-color);
 }
 
 .nav__link {
   display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-family: var(--font-main);
   font-weight: 700;
   font-size: 14px;
@@ -78,8 +74,6 @@
   &:active {
     color: var(--primary-color);
   }
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .nav__item {

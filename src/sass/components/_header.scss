@@ -11,33 +11,17 @@
     display: flex;
     padding-top: 8px;
     padding-bottom: 8px;
-
     @include mobile-only () {
         justify-content: space-between;
     }
-    // @media screen and (max-width: 767px) {
-    //     justify-content: space-between;   
-    // }
-
     @include tablet() {
         padding-top: 32px;  
     }
-    
-    // @media screen and (min-width: 768px) {
-    //     padding-top: 32px;
-    // }
-
     @include desktop() {
         justify-content: space-between;
         padding-top: 37px;
         align-items: center;  
-    }
-
-    // @media screen and (min-width: 1200px) {
-    //     justify-content: space-between;
-    //     padding-top: 37px;
-    //     align-items: center;
-    // }    
+    }  
 }
 
 .header__btn-open {
@@ -46,22 +30,13 @@
     background-color: transparent;
     justify-content: center;
     align-items: center;
-
     @include tablet() {
         margin-right: 32px;
         margin-left: auto; 
     }
-    // @media screen and (min-width: 768px) {
-    //     margin-right: 32px;
-    //     margin-left: auto;
-    // }
-
     @include desktop() {
         display: none;
     }
-    // @media screen and (min-width: 1200px) {
-    //     display: none;
-    // }
 }
 
 .desktop-nav {
@@ -79,10 +54,10 @@
 }
 
 .header__btn {
-    min-width: 160px;
-    height: 44px;
     justify-content: center;
     align-items: center;
+    min-width: 160px;
+    height: 44px;
     border-radius: 22px;
     background-color: #fff;
     border: 0;
@@ -100,9 +75,6 @@
     @include desktop() {
         cursor: pointer;
     }
-    // @media screen and (min-width: 1200px) {
-    //     cursor: pointer;
-    // }
 }
 
 .desktop-nav__item {
