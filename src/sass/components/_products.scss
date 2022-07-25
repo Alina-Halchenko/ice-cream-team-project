@@ -1,259 +1,424 @@
 .products-box.container {
-    @include desktop() {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
+  @include desktop() {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .products {
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .section__subtitle {
-    display: block;
-    margin-bottom: 15px;
-    font-family: var(--font-accent);
-    @include font(none, 18px, 1.15, 0.04);
-    color: var(--accent-color);
-    text-transform: uppercase;
-    text-align: center;
-    @include tablet() {
-        margin-bottom: 18px;
-        font-size: 26px;
-    }
-    @include desktop {
-        margin-bottom: 16px;
-        font-size: 30px;
-    }
+  display: block;
+  margin-bottom: 15px;
+  font-family: var(--font-accent);
+  @include font(none, 18px, 1.15, 0.04);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  text-align: center;
+  @include tablet() {
+    margin-bottom: 18px;
+    font-size: 26px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+    font-size: 30px;
+  }
 }
 
 .section__title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    font-family: var(--font-accent);
-    @include font(700, 34px, 1.15, 0.04);
-    color: var(--primary-color);
-    text-transform: uppercase;
-    text-align: center;
-    @include tablet() {
-        font-size: 48px;
-    }
-    @include desktop() {
-        margin-bottom: 20px;
-        font-size: 58px;
-    }
+  font-family: var(--font-accent);
+  @include font(700, 34px, 1.15, 0.04);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-align: center;
+  @include tablet() {
+    font-size: 48px;
+  }
+  @include desktop() {
+    margin-bottom: 20px;
+    font-size: 58px;
+  }
 }
 
 .products__list {
-    @include tablet() {
-        @include centered;
-        gap: 16px;
-    }
+  @include tablet() {
+    @include centered;
+    gap: 16px;
+  }
 
-    @include desktop {
-        @include centered;
-        gap: 32px;
-    }
+  @include desktop {
+    @include centered;
+    gap: 32px;
+  }
 }
 
 .products__item {
-    width: 100%;
+  width: 100%;
 }
 
 .products__item::before {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 280px;
-    margin-bottom: -200px;
-    margin-top: 62px;
-    transform: translateY(-62px);
+  position: relative;
+  z-index: 1;
+  display: block;
 
-    background-repeat: no-repeat;
-    background-position: center;
+  content: '';
+  width: 100%;
+  height: 280px;
+  margin-bottom: -200px;
+  margin-top: 62px;
+
+  transform: translateY(-62px);
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include retina {
+    background-size: 280px 280px;
+  }
+
+  @include tablet-only() {
+    height: 307px;
+    margin-top: 18px;
 
     @include retina {
-        background-size: 280px 280px;
+      background-size: 224px 224px;
     }
+  }
 
-    @include tablet-only() {
-        height: 307px;
-        margin-top: 18px;
+  @include desktop {
+    height: 394px;
+    margin-top: 62px;
 
-        @include retina {
-            background-size: 224px 224px;
-        }
+    @include retina {
+      background-size: 368px 394px;
     }
-
-    @include desktop {
-        height: 394px;
-        margin-top: 62px;
-
-        @include retina {
-            background-size: 368px 394px;
-        }
-    }
+  }
 }
 
 .products__item:nth-child(1):before {
-    background-image: url(../images/products/product1-mob.png);
+  background-image: url(../images/products/product1-mob.png);
+
+  @include retina {
+    background-image: url(../images/products/product1-mob@2.png);
+  }
+
+  @include tablet() {
+    background-image: url(../images/products/product1-tab.png);
 
     @include retina {
-        background-image: url(../images/products/product1-mob@2.png);
+      background-image: url(../images/products/product1-tab@2.png);
     }
+  }
 
-    @include tablet() {
-        background-image: url(../images/products/product1-tab.png);
+  @include desktop() {
+    background-image: url(../images/products/product1-desk.png);
 
-        @include retina {
-            background-image: url(../images/products/product1-tab@2.png);
-        }
+    @include retina {
+      background-image: url(../images/products/product1-desk@2.png);
     }
-
-    @include desktop() {
-        background-image: url(../images/products/product1-desk.png);
-
-        @include retina {
-            background-image: url(../images/products/product1-desk@2.png);
-        }
-    }
+  }
 }
 
 .products__item:nth-child(2)::before {
-    background-image: url(../images/products/product2-mob.png);
+  background-image: url(../images/products/product2-mob.png);
+
+  @include retina {
+    background-image: url(../images/products/product2-mob@2.png);
+  }
+
+  @include tablet() {
+    background-image: url(../images/products/product2-tab.png);
 
     @include retina {
-        background-image: url(../images/products/product2-mob@2.png);
+      background-image: url(../images/products/product2-tab@2.png);
     }
+  }
 
-    @include tablet() {
-        background-image: url(../images/products/product2-tab.png);
+  @include desktop() {
+    background-image: url(../images/products/product2-desk.png);
 
-        @include retina {
-            background-image: url(../images/products/product2-tab@2.png);
-        }
+    @include retina {
+      background-image: url(../images/products/product2-desk@2.png);
     }
-
-    @include desktop() {
-        background-image: url(../images/products/product2-desk.png);
-
-        @include retina {
-            background-image: url(../images/products/product2-desk@2.png);
-        }
-    }
+  }
 }
 
 .products__item:nth-child(3)::before {
-    background-image: url(../images/products/product3-mob.png);
+  background-image: url(../images/products/product3-mob.png);
+
+  @include retina {
+    background-image: url(../images/products/product3-mob@2.png);
+  }
+
+  @include tablet() {
+    background-image: url(../images/products/product3-tab.png);
+  }
+  @include retina {
+    background-image: url(../images/products/product3-tab@2.png);
+  }
+
+  @include desktop() {
+    background-image: url(../images/products/product3-desk.png);
 
     @include retina {
-        background-image: url(../images/products/product3-mob@2.png);
+      background-image: url(../images/products/product3-desk@2.png);
     }
-
-    @include tablet() {
-        background-image: url(../images/products/product3-tab.png);
-    }
-    @include retina {
-        background-image: url(../images/products/product3-tab@2.png);
-    }
-
-    @include desktop() {
-        background-image: url(../images/products/product3-desk.png);
-
-        @include retina {
-            background-image: url(../images/products/product3-desk@2.png);
-        }
-    }
+  }
 }
 
 .products__item-wrapper {
-    padding: 155px 25px 40px;
+  position: relative;
 
-    border-radius: 24px;
-    @include tablet() {
-        padding-top: 118px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-    @include desktop() {
-        padding-top: 165px;
-        padding-left: 63px;
-        padding-right: 63px;
-    }
+  overflow: hidden;
+
+  padding: 155px 25px 40px;
+
+  border-radius: 24px;
+  @include tablet() {
+    padding-top: 118px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include desktop() {
+    padding-top: 165px;
+    padding-left: 63px;
+    padding-right: 63px;
+  }
 }
 
 .products__item-wrapper--pink {
-    background-color: var(--product-color-first);
+  background-color: var(--product-color-first);
 }
 
 .products__item-wrapper--yellow {
-    background-color: var(--product-color-second);
+  background-color: var(--product-color-second);
 }
 
 .products__item-wrapper--green {
-    background-color: var(--product-color-third);
+  background-color: var(--product-color-third);
 }
 
 .products__item-title {
-    position: relative;
+  position: relative;
+  margin-bottom: 70px;
+  font-family: var(--font-accent);
+  @include font(400, 20px, 1.15, 0.04);
+  color: var(--text-color-light);
+  text-transform: uppercase;
+  text-align: center;
+  @include desktop {
     margin-bottom: 70px;
-    font-family: var(--font-accent);
-    @include font(400, 20px, 1.15, 0.04);
-    color: var(--text-color-light);
-    text-transform: uppercase;
-    text-align: center;
-    @include desktop {
-        margin-bottom: 70px;
-        font-size: 30px;
-    }
+    font-size: 30px;
+  }
 }
 
 .products__item-title::after {
-    content: ". . .";
-    position: absolute;
-    top: 40px;
-    left: 45%;
+  content: '. . .';
+  position: absolute;
+  top: 40px;
+  left: 45%;
 
-    display: block;
+  display: block;
 }
 
 .products__item-paragraph {
-    height: auto;
-    margin-bottom: 32px;
-    @include font(700, 14px, 1.52, 0.04);
-    color: var(--text-color-light);
-    text-align: center;
+  height: auto;
+  margin-bottom: 32px;
+  @include font(700, 14px, 1.52, 0.04);
+  color: var(--text-color-light);
+  text-align: center;
 
-    @include tablet() {
-        line-height: 1.76;
-        letter-spacing: 0.05;
-    }
-    @include desktop() {
-        margin-bottom: 60px;
-        font-size: 16px;
-        letter-spacing: 0.04;
-    }
+  @include tablet() {
+    line-height: 1.76;
+    letter-spacing: 0.05;
+  }
+  @include desktop() {
+    margin-bottom: 60px;
+    font-size: 16px;
+    letter-spacing: 0.04;
+  }
 }
 
 .products__item-paragraph-mob {
-    @include tablet {
-        display: none;
-    }
+  @include tablet {
+    display: none;
+  }
 }
 
 .products__btn {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: #ffffff;
-    cursor: pointer;
-    transition: var(--transition-prop);
-    &:hover,
-    &:focus {
-        border: 1px solid var(--btn-primary-color);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: var(--transition-prop);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--btn-primary-color);
+  }
+}
+
+.description {
+  position: absolute;
+  z-index: 1;
+
+  transform: translateY(156%);
+
+  transition: var(--transition-prop);
+
+  width: calc(100% - 50px);
+
+  @media screen and (min-width: 428px) {
+    padding: 0;
+  }
+
+  @include tablet() {
+    width: calc(100% - 64px);
+  }
+
+  @include desktop() {
+    width: calc(100% - 126px);
+  }
+}
+
+.description--ice-cream {
+  background-color: var(--product-color-first);
+}
+
+.description--ice-coffee {
+  background-color: var(--product-color-second);
+}
+
+.description--milkshakes {
+  background-color: var(--product-color-third);
+}
+
+.description::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  background-position: 50% 50%;
+
+  transform: translateX(-50%);
+
+  display: block;
+  width: 230px;
+  height: 100%;
+
+  opacity: 0.2;
+}
+
+.description--ice-cream::after {
+  background-image: url(../images/products/strawberry-mob.png);
+  background-size: 128px 150px;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url(../images/products/strawberry-mob@2.png);
+  }
+
+  @include tablet() {
+    background-image: url(../images/products/strawberry-tab.png);
+    background-size: 204px 240px;
+
+    @include retina {
+      background-image: url(../images/products/strawberry-tab@2.png);
     }
+  }
+
+  @include desktop() {
+    background-image: url(../images/products/strawberry-desk.png);
+    background-size: 242px 273px;
+
+    @include retina {
+      background-image: url(../images/products/strawberry-desk@2.png);
+    }
+  }
+}
+
+.description--ice-coffee::after {
+  background-image: url(../images/products/cafe-mob.png);
+  background-size: 128px 150px;
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: url(../images/products/cafe-mob@2.png);
+  }
+
+  @include tablet() {
+    background-image: url(../images/products/cafe-tab.png);
+    background-size: 204px 240px;
+
+    @include retina {
+      background-image: url(../images/products/cafe-tab@2.png);
+    }
+  }
+
+  @include desktop() {
+    background-image: url(../images/products/cafe-desk.png);
+    background-size: 242px 273px;
+
+    @include retina {
+      background-image: url(../images/products/cafe-desk@2.png);
+    }
+  }
+}
+
+.description__list--ice-cream {
+  color: var(--primary-color);
+}
+
+.description__list--ice-coffee {
+  color: #f86300;
+}
+
+.description__list--milkshakes {
+  color: #67a567;
+}
+
+.description__item {
+  text-align: center;
+  font-family: var(--font-accent);
+
+  @include font(400, 14px, 1.52, 0.04);
+
+  @include tablet() {
+    @include font(400, 12px, 1.15, 0.04);
+  }
+
+  @include desktop() {
+    @include font(400, 16, 1.15, 0.04);
+  }
+}
+
+.description__item:not(:last-child) {
+  @media screen and(max-width:427.89px) {
+    margin-bottom: 5px;
+  }
+
+  @include tablet() {
+    margin-bottom: 18px;
+  }
+}
+
+.description__dot {
+  letter-spacing: 8px;
+
+  @include tablet() {
+    letter-spacing: 1px;
+  }
+}
+
+.products__item-wrapper:hover .description {
+  transform: translateY(0);
 }
