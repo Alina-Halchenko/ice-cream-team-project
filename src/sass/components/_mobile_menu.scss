@@ -3,7 +3,7 @@
   background-color: #e17992;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   padding: 20px;
@@ -25,6 +25,9 @@
   background-color: transparent;
   fill: #fff;
 }
+.menu__close-icon {
+  stroke: #fff;
+}
 
 .menu__btn-buy {
   margin-left: auto;
@@ -43,13 +46,17 @@
   color: #d41443;
 }
 
-.header__btn-open {
-  border: 1px solid #000;
+.buy__btn-arrow {
+  stroke: #d41443;
 }
-.header__icon-btn {
-  margin-left: 16px;
-  fill: currentColor;
-}
+
+// .header__btn-open {
+//   border: 1px solid #000;
+// }
+// .header__icon-btn {
+//   margin-left: 16px;
+//   fill: currentColor;
+// }
 
 .nav__link {
   display: block;
