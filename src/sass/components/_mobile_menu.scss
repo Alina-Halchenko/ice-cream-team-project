@@ -2,11 +2,26 @@
   position: fixed;
   background-color: #e17992;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 100;
   width: 100vw;
   height: 100vh;
   padding: 20px;
+  @include tablet-only() {
+    width: 40%;
+    padding-right: 32px; 
+  }
+
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: 40%;
+  //   padding-right: 32px;
+  //  }
+  @include desktop() {
+    display: none;
+  }
+  //  @media screen and (min-width: 1200px) {
+  //   display: none;
+  //  }
 }
 
 .mobile-container {
@@ -18,8 +33,10 @@
 
 .menu__btn-close {
   margin-left: auto;
+  top: 20px;
+  right: 0;
   margin-bottom: 26px;
-  padding: 8px;
+  // padding: 8px;
 
   border: none;
   background-color: transparent;
@@ -43,20 +60,13 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
-  color: #d41443;
+  color: var(--primary-color);
 }
 
 .buy__btn-arrow {
-  stroke: #d41443;
+  stroke: var(--primary-color);
+  margin-left: 16px;
 }
-
-// .header__btn-open {
-//   border: 1px solid #000;
-// }
-// .header__icon-btn {
-//   margin-left: 16px;
-//   fill: currentColor;
-// }
 
 .nav__link {
   display: block;
@@ -77,6 +87,7 @@
   &:last-child {
     border-bottom: 1px solid #e18298;
   }
+  
 }
 
 .is-hidden {
