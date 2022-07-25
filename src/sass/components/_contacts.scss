@@ -256,7 +256,7 @@
 }
 
 .contacts__btn-icon {
-  fill: var(--btn-primary-color);
+  stroke: var(--btn-primary-color);
   transition: background-color var(--transition-prop);
 }
 
@@ -270,5 +270,5 @@
 }
 
 .contacts__btn:hover .contacts__btn-icon {
-  fill: var(--text-color-light);
+  stroke: var(--text-color-light);
 }
