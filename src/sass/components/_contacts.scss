@@ -1,7 +1,7 @@
-.contacts-box.container {
-  @include tablet() {
-    padding-left: 16px;
-    padding-right: 16px;
+.contacts .container {
+  @include tablet-only() {
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
   }
 }
 
@@ -9,14 +9,14 @@
   padding-top: var(--section-padding);
   background-image: linear-gradient(
     to bottom,
-    var(--text-color-light) 24%,
+    #ffffff 24%,
     var(--bg-color-light) 24%
   );
 
-  @include tablet() {
+  @include tablet-only() {
     background-image: linear-gradient(
       to bottom,
-      var(--text-color-light) 51%,
+      #ffffff 51%,
       var(--bg-color-light) 51%
     );
   }
@@ -24,7 +24,7 @@
   @include desktop() {
     background-image: linear-gradient(
       to bottom,
-      var(--text-color-light) 24%,
+      #ffffff 24%,
       var(--bg-color-light) 24%
     );
   }
@@ -36,7 +36,8 @@
 
   @include tablet() {
     display: flex;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: var(--gutter);
 
     margin-bottom: 60px;
   }
@@ -46,32 +47,29 @@
   }
 }
 
-.contacts__card:not(:last-child) {
-  margin-bottom: 20px;
-
-  @include tablet() {
-    margin-bottom: 0;
-  }
-}
-
 .contacts__card {
-  min-width: 280px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
 
   background: var(--text-color-light);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
 
+  @include mobile-only() {
+    min-width: 280px;
+  }
+
   @include tablet() {
-    min-width: 224px;
+    width: calc((100% - (var(--gutter) * 2)) / 3);
   }
 
   @include desktop() {
-    min-width: 368px;
     padding: 40px;
+  }
+
+  &:not(:last-child) {
+    @include mobile-only() {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -98,11 +96,11 @@
   color: var(--text-color-light);
 
   @include tablet() {
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin-bottom: 32px;
 
-    @include font(none, 16px, none, none);
+    font-size: var(--font-size);
   }
 }
 
@@ -118,15 +116,15 @@
   margin-bottom: 8px;
   @include font(500, 12px, 1.86, 0.04em);
 
-  @include tablet() {
+  @include tablet-only() {
     margin-bottom: 12px;
-    @include font(none, 14px, none, none);
+    font-size: 14px;
   }
 
   @include desktop() {
     margin-bottom: 8px;
 
-    @include font(none, 16px, none, none);
+    font-size: var(--font-size);
   }
 }
 
@@ -134,12 +132,14 @@
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
 
-  @include tablet() {
-    @include font(none, 14px, 1.66, none);
+  @include tablet-only() {
+    font-size: 14px;
+    line-height: 1.66;
   }
 
   @include desktop() {
-    @include font(none, 16px, 1.83, none);
+    font-size: var(--font-size);
+    line-height: 1.83;
   }
 }
 
@@ -160,12 +160,12 @@
 .contacts__day {
   @include font(500, 12px, 1.86, 0.04em);
 
-  @include tablet() {
-    @include font(none, 14px, none, none);
+  @include tablet-only() {
+    font-size: 14px;
   }
 
   @include desktop() {
-    @include font(none, 16px, none, none);
+    font-size: var(--font-size);
   }
 }
 
@@ -173,12 +173,12 @@
   @include font(500, 12px, 1.86, 0.04em);
   color: var(--accent-color);
 
-  @include tablet() {
-    @include font(none, 14px, none, none);
+  @include tablet-only() {
+    font-size: 14px;
   }
 
   @include desktop() {
-    @include font(none, 16px, none, none);
+    font-size: var(--font-size);
   }
 }
 
@@ -194,12 +194,12 @@
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
 
-  @include tablet() {
-    @include font(none, 14px, 1.83, none);
+  @include tablet-only() {
+    font-size: 14px;
   }
 
   @include desktop() {
-    @include font(none, 16px, none, none);
+    font-size: var(--font-size);
   }
 }
 
@@ -215,7 +215,7 @@
     gap: 14px;
   }
 
-  @include tablet() {
+  @include desktop() {
     gap: 12px;
   }
 }
@@ -236,7 +236,7 @@
 
   transition: background-color var(--transition-prop);
 
-  @include tablet() {
+  @include tablet-only() {
     min-width: 191px;
   }
 
@@ -246,7 +246,7 @@
 }
 
 .contacts__btn--width {
-  @include tablet() {
+  @include tablet-only() {
     min-width: 174px;
   }
 
