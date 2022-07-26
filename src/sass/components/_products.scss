@@ -222,9 +222,10 @@
   background-color: #ffffff;
   cursor: pointer;
   transition: var(--transition-prop);
+
   &:hover,
   &:focus {
-    border: 1px solid var(--btn-primary-color);
+    background-color: var(--btn-accent-color);
   }
 }
 

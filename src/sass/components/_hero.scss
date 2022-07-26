@@ -152,7 +152,7 @@
     transition: background-color 250ms;
     &:hover,
     &:focus {
-      background-color: #f15277;
+      background-color: var(--btn-hero-color);
     }
   }
   &--white {
@@ -211,7 +211,8 @@
   color: var(--primary-color);
   background-color: var(--text-color-light);
   transition: background-color 250ms;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--btn-accent-color);
   }
   @include mobile-only() {
@@ -332,6 +333,7 @@
   --bg-color: #f0d1a5;
   --bg-color-light: #fff9f5;
   --icon-bg-color: #fed4a5;
+  --btn-hero-color: #f19f52;
 
   .hero__img--prompt {
     top: 240px;
@@ -348,6 +350,7 @@
   --bg-color: #c2e297;
   --bg-color-light: #f5fff5;
   --icon-bg-color: #acfea5;
+  --btn-hero-color: #52f17a;
 
   .hero__img--prompt {
     top: 320px;

@@ -28,6 +28,7 @@
       #ffffff 24%,
       var(--bg-color-light) 24%
     );
+    padding-bottom: 60px;
   }
 }
 
@@ -230,6 +231,7 @@
 
   border-style: none;
   border-radius: 22px;
+  cursor: pointer;
 
   @include font(500, var(--font-size), 1.21, 0.04em);
   color: var(--btn-primary-color);

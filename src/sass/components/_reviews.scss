@@ -179,7 +179,7 @@
 .reviews_btn {
   width: 12px;
   height: 12px;
-  // если увеличить размер - домик видно, как его вприсать в эти 12рх? Голова не варит
+
   @include centered();
 
   border-radius: 50%;
