@@ -224,13 +224,13 @@
   @include centered;
 
   min-width: 161px;
-  min-height: 44px;
+  max-height: 44px;
   padding: 12px;
 
   border-style: none;
   border-radius: 22px;
 
-  @include font(500, var(--font-size), 1.31, 0.04em);
+  @include font(500, var(--font-size), 1.21, 0.04em);
   color: var(--btn-primary-color);
   background-color: var(--text-color-light);
 
@@ -253,6 +253,11 @@
   @include desktop() {
     min-width: 168px;
   }
+}
+
+.contacts__btn-text {
+  display: inline-block;
+  margin-bottom: 3px;
 }
 
 .contacts__btn-icon {

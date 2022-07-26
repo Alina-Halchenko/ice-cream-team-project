@@ -39,6 +39,10 @@
       <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M0 29.714h45.714"></path>
     </symbol>
 
+    <symbol id="icon-arrow-right" viewBox="0 0 28 32">
+<path d="M27.413 17.413l-10 10c-0.387 0.394-0.9 0.587-1.413 0.587s-1.024-0.195-1.414-0.586c-0.781-0.781-0.781-2.047 0-2.828l6.589-6.586h-19.175c-1.104 0-2-0.894-2-2s0.896-2 2-2h19.175l-6.588-6.588c-0.781-0.781-0.781-2.047 0-2.828s2.047-0.781 2.828 0l10 10c0.778 0.784 0.778 2.047-0.003 2.828z"></path>
+</symbol>
+
     <symbol id="icon-arrow-right-btn" viewBox="0 0 22 32">
       <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="6.4" d="M3.471 3.2l13.7 12.8-13.7 12.8"></path>
     </symbol>
