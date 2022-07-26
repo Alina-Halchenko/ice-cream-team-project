@@ -32,7 +32,7 @@
         For the production of organic ice cream, we use only organic dairy
         products of our own production, and comply with all the necessary rules.
       </p>
-      <button type="button" class="hero__btn"   data-green-magic>
+      <button type="button" class="hero__btn" data-green-magic>
         <svg class="hero__btn-icon" width="8" height="7">
           <use href="./images/icons-sprite.svg#icon-arrow-right"></use>
         </svg>
@@ -56,49 +56,64 @@
         alt="ice-cream"
         width="171"
       />
-    </picture> 
+    </picture>
 
-        <map name="schemes">
-          <area class="schemes__circle--coffee" shape="rect" coords="0, 0, 236, 254" alt="Green magic" data-coffee-magic>
-          <area class="schemes__circle--green" shape="rect" coords="0, 255, 236, 319" alt="Coffee magic" data-green-magic>
-          <area class="schemes__circle--pink" shape="rect" coords="0, 320, 236, 405" alt="Pink magic" data-pink-magic>
-        </map>
+    <map class="map" name="schemes">
+      <area
+        class="schemes__circle--coffee"
+        shape="rect"
+        coords="0, 0, 236, 254"
+        alt="Green magic"
+        data-coffee-magic
+      />
+      <area
+        class="schemes__circle--green"
+        shape="rect"
+        coords="0, 255, 236, 319"
+        alt="Coffee magic"
+        data-green-magic
+      />
+      <area
+        class="schemes__circle--pink"
+        shape="rect"
+        coords="0, 320, 236, 405"
+        alt="Pink magic"
+        data-pink-magic
+      />
+    </map>
 
-        <picture>
-          <source
-            srcset="
-              ./images/hero/ice-cream-desk.png   1x,
-              ./images/hero/ice-cream-desk@2.png 2x
-            "
-            media="(min-width:1200px)"
-          />
-          <source
-            srcset="
-              ./images/hero/ice-cream-tab.png   1x,
-              ./images/hero/ice-cream-tab@2.png 2x
-            "
-            media="(min-width:768px)"
-          />
-          <source
-            srcset="
-              ./images/hero/ice-cream-mob.png   1x,
-              ./images/hero/ice-cream-mob@2.png 2x
-            "
-            media="(min-width:320px)"
-          />
-          <img
-            class="hero__img--ice-cream"
-            src="./images/hero/ice-cream-mob.png"
-            alt="ice-cream"
-            width="171" usemap="#schemes"
-          />
-        </picture>
+    <picture>
+      <source
+        srcset="
+          ./images/hero/ice-cream-desk.png   1x,
+          ./images/hero/ice-cream-desk@2.png 2x
+        "
+        media="(min-width:1200px)"
+      />
+      <source
+        srcset="
+          ./images/hero/ice-cream-tab.png   1x,
+          ./images/hero/ice-cream-tab@2.png 2x
+        "
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./images/hero/ice-cream-mob.png   1x,
+          ./images/hero/ice-cream-mob@2.png 2x
+        "
+        media="(min-width:320px)"
+      />
+      <img
+        class="hero__img--ice-cream"
+        src="./images/hero/ice-cream-mob.png"
+        alt="ice-cream"
+        width="171"
+        usemap="#schemes"
+      />
+    </picture>
 
-      <div class="hero__img--prompt">Click me!</div>  
-
-      
-
-
+    <div class="hero__img--prompt">Click me!</div>
 
     <span class="hero__circle"></span>
     <picture>

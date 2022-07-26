@@ -3,7 +3,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    // background-color: rgba(255, 184, 202, 0.4);
     z-index: 100;
 }
 
@@ -46,7 +45,7 @@
 }
 
 .header__icon-btn {
-    stroke: #d41443;
+    stroke: var(--primary-color);
 }
 
 .desktop-nav__item:not(:last-child) {

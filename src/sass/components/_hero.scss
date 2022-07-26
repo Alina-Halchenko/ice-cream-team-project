@@ -20,7 +20,7 @@
 }
 
 .hero__title {
-  z-index: 2;
+  z-index: 3;
   position: relative;
   width: 218px;
   font-family: var(--font-accent);
@@ -123,6 +123,9 @@
 .hero__list {
   display: flex;
   gap: 8px;
+
+  position: relative;
+  z-index: 3;
   @include tablet {
     margin-bottom: 20px;
   }
@@ -255,27 +258,31 @@
   @include desktop {
     width: 236px;
     right: 328px;
-}
-}
-
-.hero__img--prompt {
-
-  position: absolute;
-  top: 170px;
-  left: 700px;
-  z-index: 3;
-  font-family: var(--font-accent);
-  font-size: 16px;
-  color: var(--text-color-light);
-  opacity: 0;
-  transition: opacity var(--transition-prop);
-  pointer-events: none;
-
-  &.visible {
-  opacity: 1;
   }
 }
 
+.hero__img--prompt {
+  display: none;
+  @include desktop() {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 700px;
+    z-index: 3;
+
+    font-family: var(--font-accent);
+    font-size: 16px;
+    color: var(--primary-color);
+    text-shadow: 0 0 6px #fff, 2px 2px 10px #fff, -2px -2px 10px #fff;
+
+    opacity: 0;
+    transition: opacity var(--transition-prop);
+    pointer-events: none;
+
+    -webkit-animation: scale-up-center 2s linear 5s infinite reverse;
+    animation: scale-up-center 2s linear 5s infinite reverse;
+  }
+}
 
 .hero__circle {
   position: absolute;
@@ -316,14 +323,12 @@
 
 // schemes styles
 
-
-
 .coffee-scheme {
   --primary-color: #ce7336;
   --accent-color: #e8c086;
-  
+
   --btn-primary-color: #cc7236;
-  
+
   --bg-color: #f0d1a5;
   --bg-color-light: #fff9f5;
   --icon-bg-color: #fed4a5;
@@ -331,16 +336,15 @@
   .hero__img--prompt {
     top: 240px;
     left: 760px;
-    color: var(--primary-color);
   }
 }
 
 .green-scheme {
   --primary-color: #24c44c;
   --accent-color: #acd17b;
-    
+
   --btn-primary-color: #24c44c;
-    
+
   --bg-color: #c2e297;
   --bg-color-light: #f5fff5;
   --icon-bg-color: #acfea5;
@@ -348,5 +352,13 @@
   .hero__img--prompt {
     top: 320px;
     left: 730px;
+  }
+}
+
+.map {
+  display: none;
+
+  @include desktop() {
+    display: inline;
   }
 }

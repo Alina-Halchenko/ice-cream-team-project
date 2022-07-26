@@ -6,7 +6,7 @@
 .section__title {
   margin-bottom: 20px;
 
-  font-family: 'Titan One';
+  font-family: var(--font-accent);
   font-size: 34px;
   line-height: 1.15;
   text-align: center;
@@ -14,11 +14,11 @@
   text-transform: uppercase;
   color: var(--primary-color);
 
-  @include tablet-only {
+  @include tablet-only() {
     font-size: 48px;
   }
 
-  @include desctop {
+  @include desktop() {
     font-size: 58px;
     line-height: 1.14;
   }
@@ -27,19 +27,20 @@
 .section__subtitle {
   margin-bottom: 16px;
 
-  font-family: 'Titan One';
+  font-family: var(--font-accent);
   font-size: 18px;
   line-height: 1.16;
+  letter-spacing: 0.04em;
   text-align: center;
   text-transform: uppercase;
   color: var(--accent-color);
 
-  @include tablet-only {
+  @include tablet-only() {
     font-size: 26px;
     line-height: 1.15;
   }
 
-  @include desctop {
+  @include desktop() {
     font-size: 30px;
     line-height: 1.13;
   }
