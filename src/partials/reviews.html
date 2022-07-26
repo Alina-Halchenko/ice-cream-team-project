@@ -2,17 +2,16 @@
 <section class="reviews">
   <div class="container">
     <h2 class="section__title visual-hidden">Reviews</h2>
-    <div class="reviews__slider">
-      <div class="reviews-slider__item">
+    <ul class="reviews__slider">
+      <li class="reviews-slider__item">
         <article class="reviews__clients">
           <img
             class="reviews__img"
             src="./images/reviews/userpic1.jpg"
-            alt="Фото клиента"
-            width="85"
+            alt="Client's photo"
           />
-          <div class="reviews__thumb">
-            <div class="reviews__line">
+          <div class="reviews__bg">
+            <div class="reviews__bg-line">
               <p class="reviews__text">
                 Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
                 Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
@@ -22,17 +21,17 @@
           </div>
           <p class="reviews__name">Emily, Los Angeles</p>
         </article>
-      </div>
-      <div class="reviews-slider__item">
+      </li>
+
+      <li class="reviews-slider__item visual-hidden">
         <article class="reviews__clients">
           <img
             class="reviews__img"
-            src="./images/reviews/userpic2.jpg"
-            alt="Фото клиента"
-            width="85"
+            src="./images/reviews/userpic1.jpg"
+            alt="Client's photo"
           />
-          <div class="reviews__thumb">
-            <div class="reviews__line">
+          <div class="reviews__bg">
+            <div class="reviews__bg-line">
               <p class="reviews__text">
                 Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
                 Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
@@ -42,17 +41,17 @@
           </div>
           <p class="reviews__name">Emily, Los Angeles</p>
         </article>
-      </div>
-      <div class="reviews-slider__item">
+      </li>
+
+      <li class="reviews-slider__item visual-hidden">
         <article class="reviews__clients">
           <img
             class="reviews__img"
-            src="./images/reviews/userpic3.jpg"
-            alt="Фото клиента"
-            width="85"
+            src="./images/reviews/userpic1.jpg"
+            alt="Client's photo"
           />
-          <div class="reviews__thumb">
-            <div class="reviews__line">
+          <div class="reviews__bg">
+            <div class="reviews__bg-line">
               <p class="reviews__text">
                 Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
                 Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
@@ -62,26 +61,14 @@
           </div>
           <p class="reviews__name">Emily, Los Angeles</p>
         </article>
-      </div>
-      <!---
-        <ul class="reviews__list">
-          <li class="reviews__item checkbox visually-hidden">
-            <svg class="reviews__icon" width="12" height="12">
-              <use href="./images/icons-sprite.svg#icon-ellipse"></use>
-            </svg>
-          </li>
-          <li class="reviews__item">
-            <svg class="reviews__icon" width="12" height="12">
-              <use href="./images/icons-sprite.svg#icon-ellipse"></use>
-            </svg>
-          </li>
-          <li class="reviews__item">
-            <svg class="reviews__icon" width="12" height="12">
-              <use href="./images/icons-sprite.svg#icon-ellipse"></use>
-            </svg>
-          </li>
-        </ul>
-        --->
-    </div>
+      </li>
+    </ul>
+    <ul class="reviews__nav-list">
+      <li class="reviews__nav-item">
+        <button class="reviews_btn active"></button>
+      </li>
+      <li class="reviews__nav-item"><button class="reviews_btn"></button></li>
+      <li class="reviews__nav-item"><button class="reviews_btn"></button></li>
+    </ul>
   </div>
 </section>
