@@ -1,15 +1,110 @@
 .header {
-    background-color: var(--bg-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // background-color: rgba(255, 184, 202, 0.4);
+    z-index: 100;
 }
 
 .header-wrapper {
     display: flex;
-    justify-content: space-between;
     padding-top: 8px;
     padding-bottom: 8px;
+    @include mobile-only() {
+        justify-content: space-between;
+    }
+    @include tablet() {
+        padding-top: 32px;
+    }
+    @include desktop() {
+        justify-content: space-between;
+        padding-top: 37px;
+        align-items: center;
+    }
 }
 
 .header__btn-open {
+    display: flex;
     border: none;
     background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    @include tablet() {
+        margin-right: 32px;
+        margin-left: auto;
+    }
+    @include desktop() {
+        display: none;
+    }
+}
+
+.desktop-nav {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.header__icon-btn {
+    stroke: #d41443;
+}
+
+.desktop-nav__item:not(:last-child) {
+    margin-right: 35px;
+}
+
+.header__btn-buy {
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #fff;
+    border: 0;
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    color: var(--primary-color);
+
+    transition: background-color var(--transition-prop);
+
+    &:hover,
+    &:focus {
+        background-color: #ecebeb;
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @include desktop() {
+        cursor: pointer;
+    }
+
+    &--mobile {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+        padding: 8px 16px;
+        min-width: 209px;
+    }
+}
+
+.desktop-nav__item {
+    display: inline;
+}
+
+.desktop-nav__link {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    color: #fff;
+
+    transition: color var(--transition-prop);
+
+    &:focus,
+    &:hover,
+    &.active {
+        color: var(--primary-color);
+    }
 }
