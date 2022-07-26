@@ -1,12 +1,35 @@
 .menu {
   position: fixed;
-  background-color: #e17992;
   top: 0;
-  left: 0;
-  z-index: 2;
+  right: 0;
+  background-color: #e17992;
+  z-index: 100;
   width: 100vw;
   height: 100vh;
   padding: 20px;
+
+  transform: translateX(0);
+  transition: transform var(--transition-prop), opacity var(--transition-prop);
+  @include tablet-only() {
+    width: 40%;
+    padding-right: 32px;
+  }
+  @include desktop() {
+    display: none;
+  }
+}
+
+.menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+
+  @include mobile-only() {
+    transform: translateX(-100%);
+  }
+
+  @include tablet-only() {
+    transform: translateX(100%);
+  }
 }
 
 .mobile-container {
@@ -14,45 +37,39 @@
   flex-direction: column;
   height: 100%;
   overflow: auto;
+
+  @include mobile-only() {
+    max-width: 400px;
+  }
 }
 
 .menu__btn-close {
+  top: 20px;
+  right: 0;
   margin-left: auto;
   margin-bottom: 26px;
-  padding: 8px;
-
+  transition: transform 300ms linear;
   border: none;
   background-color: transparent;
-  fill: #fff;
+  &:hover,
+  &:focus {
+    transform: rotate(-90deg);
+  }
 }
 
-.menu__btn-buy {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 32px;
-  padding: 8px 16px;
-  min-width: 209px;
-  min-height: 44px;
-  border-radius: 22px;
-  background-color: #fff;
-  border: 0;
-  font-family: var(--font-main);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-  color: #d41443;
+.menu__close-icon {
+  stroke: #fff;
 }
 
-.header__btn-open {
-  border: 1px solid #000;
-}
-.header__icon-btn {
+.buy__btn-arrow {
   margin-left: 16px;
-  fill: currentColor;
+  stroke: var(--primary-color);
 }
 
 .nav__link {
   display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-family: var(--font-main);
   font-weight: 700;
   font-size: 14px;
@@ -61,8 +78,6 @@
   &:active {
     color: var(--primary-color);
   }
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .nav__item {
@@ -70,10 +85,4 @@
   &:last-child {
     border-bottom: 1px solid #e18298;
   }
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
 }
