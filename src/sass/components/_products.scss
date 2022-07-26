@@ -5,41 +5,6 @@
   }
 }
 
-// .section__subtitle {
-//   display: block;
-//   margin-bottom: 15px;
-//   font-family: var(--font-accent);
-//   @include font(none, 18px, 1.15, 0.04);
-//   color: var(--accent-color);
-//   text-transform: uppercase;
-//   text-align: center;
-//   @include tablet() {
-//     margin-bottom: 18px;
-//     font-size: 26px;
-//   }
-//   @include desktop {
-//     margin-bottom: 16px;
-//     font-size: 30px;
-//   }
-// }
-
-.section__title {
-  margin-bottom: 20px;
-
-  font-family: var(--font-accent);
-  @include font(700, 34px, 1.15, 0.04);
-  color: var(--primary-color);
-  text-transform: uppercase;
-  text-align: center;
-  @include tablet() {
-    font-size: 48px;
-  }
-  @include desktop() {
-    margin-bottom: 20px;
-    font-size: 58px;
-  }
-}
-
 .products__list {
   @include tablet() {
     @include centered;

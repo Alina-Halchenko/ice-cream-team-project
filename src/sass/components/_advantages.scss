@@ -1,8 +1,6 @@
 .advantages {
     background-color: var(--bg-color-light);
 
-    padding-bottom: var(--section-padding);
-
     &__list {
         @include tablet() {
             display: flex;

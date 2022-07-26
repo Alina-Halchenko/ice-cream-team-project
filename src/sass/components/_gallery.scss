@@ -4,6 +4,21 @@
         var(--bg-color-light) 20%,
         #ffffff 20%
     );
+    @include tablet() {
+        background-image: linear-gradient(
+            to bottom,
+            var(--bg-color-light) 58%,
+            #ffffff 58%
+        );
+    }
+    @include desktop() {
+        padding: var(--section-padding) 0;
+        background-image: linear-gradient(
+            to bottom,
+            var(--bg-color-light) 27%,
+            #ffffff 27%
+        );
+    }
 
     &__grid {
         margin: 0 auto;
