@@ -269,6 +269,7 @@
   color: var(--text-color-light);
   opacity: 0;
   transition: opacity var(--transition-prop);
+  pointer-events: none;
 
   &.visible {
   opacity: 1;
