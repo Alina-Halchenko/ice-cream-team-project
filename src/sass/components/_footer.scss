@@ -106,7 +106,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #fea5bb;
+  background-color: var(--icon-bg-color);
   color: #ffffff;
   transition: background-color var(--transition-prop);
   &:hover,

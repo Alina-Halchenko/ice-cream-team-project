@@ -1,5 +1,5 @@
 .hero {
-  background-color: var(--product-color-first);
+  background-color: var(--bg-color);
   padding-top: 194px;
   margin: 0 auto;
   height: 502px;
@@ -247,7 +247,7 @@
   width: 171px;
   right: 32px;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
   @include tablet {
     width: 146px;
     right: 303px;
@@ -255,8 +255,26 @@
   @include desktop {
     width: 236px;
     right: 328px;
+}
+}
+
+.hero__img--prompt {
+
+  position: absolute;
+  top: 170px;
+  left: 700px;
+  z-index: 3;
+  font-family: var(--font-accent);
+  font-size: 16px;
+  color: var(--text-color-light);
+  opacity: 0;
+  transition: opacity var(--transition-prop);
+
+  &.visible {
+  opacity: 1;
   }
 }
+
 
 .hero__circle {
   position: absolute;
@@ -292,5 +310,42 @@
   @include desktop {
     width: 304px;
     right: 16px;
+  }
+}
+
+// schemes styles
+
+
+
+.coffee-scheme {
+  --primary-color: #ce7336;
+  --accent-color: #e8c086;
+  
+  --btn-primary-color: #cc7236;
+  
+  --bg-color: #f0d1a5;
+  --bg-color-light: #fff9f5;
+  --icon-bg-color: #fed4a5;
+
+  .hero__img--prompt {
+    top: 240px;
+    left: 760px;
+    color: var(--primary-color);
+  }
+}
+
+.green-scheme {
+  --primary-color: #24c44c;
+  --accent-color: #acd17b;
+    
+  --btn-primary-color: #24c44c;
+    
+  --bg-color: #c2e297;
+  --bg-color-light: #f5fff5;
+  --icon-bg-color: #acfea5;
+
+  .hero__img--prompt {
+    top: 320px;
+    left: 730px;
   }
 }
