@@ -1,0 +1,2 @@
+$((function(){var o=$("#header"),l=$("#hero").innerHeight(),a=$(window).scrollTop();function e(a){a>=l?o.addClass("fixed"):o.removeClass("fixed")}e(a),$(window).on("scroll",(function(){e(a=$(this).scrollTop())})),$("[data-scroll]").on("click",(function(o){o.preventDefault();var l=$(this),a=l.data("scroll"),e=$(a).offset().top;$("#nav a").removeClass("active"),l.addClass("active"),$("html, body").animate({scrollTop:e},500)})),$("[data-slider]").slick({infinite:!0,fade:!1,slidesToShow:1,slidesToScroll:1})}));
+//# sourceMappingURL=index.e6999b19.js.map
