@@ -48,17 +48,18 @@
   right: 0;
   margin-left: auto;
   margin-bottom: 26px;
-  transition: transform 300ms linear;
+
   border: none;
   background-color: transparent;
-  &:hover,
-  &:focus {
+  &:hover .menu__close-icon,
+  &:focus .menu__close-icon {
     transform: rotate(-90deg);
   }
 }
 
 .menu__close-icon {
   stroke: #fff;
+  transition: transform 300ms linear;
 }
 
 .buy__btn-arrow {

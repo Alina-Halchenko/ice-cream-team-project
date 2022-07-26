@@ -1,5 +1,5 @@
 <!-- Header + navigation -->
-<header class="header">
+<header class="header" id="header">
   <div class="container">
     <div class="header-wrapper">
       <a href="/" aria-label="site logo">
@@ -12,22 +12,41 @@
           <use href="./images/icons-sprite.svg#icon-burger"></use>
         </svg>
       </button>
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" id="nav">
         <ul class="desktop-nav__list">
           <li class="desktop-nav__item">
-            <a href="#hero" class="desktop-nav__link active">Home</a>
+            <a href="#hero" data-scroll="#hero" class="desktop-nav__link active"
+              >Home</a
+            >
           </li>
           <li class="desktop-nav__item">
-            <a href="#advantages" class="desktop-nav__link">About us</a>
+            <a
+              href="#advantages"
+              data-scroll="#advantages"
+              class="desktop-nav__link"
+              >About us</a
+            >
           </li>
           <li class="desktop-nav__item">
-            <a href="#about" class="desktop-nav__link">How it’s made?</a>
+            <a href="#about" data-scroll="#about" class="desktop-nav__link"
+              >How it’s made?</a
+            >
           </li>
           <li class="desktop-nav__item">
-            <a href="#products" class="desktop-nav__link">Our products</a>
+            <a
+              href="#products"
+              data-scroll="#products"
+              class="desktop-nav__link"
+              >Our products</a
+            >
           </li>
           <li class="desktop-nav__item">
-            <a href="#contacts" class="desktop-nav__link">Contact</a>
+            <a
+              href="#contacts"
+              data-scroll="#contacts"
+              class="desktop-nav__link"
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -53,19 +72,27 @@
         </button>
         <ul class="nav">
           <li class="nav__item">
-            <a href="#hero" class="nav__link">Home</a>
+            <a href="#hero" data-scroll="#hero" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#advantages" class="nav__link">About us</a>
+            <a href="#advantages" data-scroll="#advantages" class="nav__link"
+              >About us</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">How it’s made?</a>
+            <a href="#about" data-scroll="#about" class="nav__link"
+              >How it’s made?</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#products" class="nav__link">Our products</a>
+            <a href="#products" data-scroll="#products" class="nav__link"
+              >Our products</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#contacts" class="nav__link">Contact</a>
+            <a href="#contacts" data-scroll="#contacts" class="nav__link"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>
