@@ -34,7 +34,7 @@
     @include font(400, 48px, 0.97, normal);
     color: var(--primary-color);
   }
-  @include tablet {
+  @include tablet() {
     width: 162px;
     &--white {
       font-size: 22px;
@@ -45,7 +45,7 @@
       line-height: 0.91;
     }
   }
-  @include desktop {
+  @include desktop() {
     width: 277px;
     margin-bottom: 24px;
     &--white {
@@ -62,10 +62,10 @@
   position: absolute;
   right: 32px;
   top: -10px;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     top: 5px;
   }
 }
@@ -83,13 +83,13 @@
   z-index: 2;
   background-color: var(--text-color-light);
   border-radius: 50%;
-  @include tablet {
+  @include tablet() {
     width: 16px;
     height: 16px;
     top: -2px;
     right: -8px;
   }
-  @include desktop {
+  @include desktop() {
     width: 30px;
     height: 30px;
     top: -4px;
@@ -103,7 +103,7 @@
   @include font(400, 28px, 1.14, 0.04em);
   text-transform: uppercase;
   color: var(--primary-color);
-  @include desktop {
+  @include desktop() {
     font-size: 46px;
     line-height: 1.15;
     margin-bottom: 2px;
@@ -114,7 +114,7 @@
   font-family: var(--font-main);
   @include font(400, 8px, 1.25, normal);
   color: var(--text-color-light);
-  @include desktop {
+  @include desktop() {
     font-size: 14px;
     line-height: 1.29;
   }
@@ -126,10 +126,10 @@
 
   position: relative;
   z-index: 3;
-  @include tablet {
+  @include tablet() {
     margin-bottom: 20px;
   }
-  @include desktop {
+  @include desktop() {
     margin-bottom: 40px;
     gap: 12px;
   }
@@ -164,7 +164,7 @@
       background-color: var(--btn-accent-color);
     }
   }
-  @include desktop {
+  @include desktop() {
     height: 40px;
     font-size: 14px;
     line-height: 1.29;
@@ -177,10 +177,10 @@
   left: 184px;
   bottom: 56px;
   width: 114px;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 200px;
     left: 229px;
     bottom: 84px;
@@ -191,7 +191,7 @@
   font-family: var(--font-main);
   @include font(400, 8px, 1.5, 0);
   color: var(--text-color-light);
-  @include desktop {
+  @include desktop() {
     font-size: 14px;
     line-height: 1.4;
   }
@@ -214,10 +214,10 @@
   &:hover {
     background-color: var(--btn-accent-color);
   }
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 26px;
     height: 26px;
   }
@@ -225,7 +225,7 @@
 
 .hero__btn-icon {
   fill: currentColor;
-  @include desktop {
+  @include desktop() {
     width: 10px;
     height: 11px;
   }
@@ -236,10 +236,10 @@
   width: 152px;
   bottom: 16px;
   z-index: 1;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 213px;
     bottom: 60px;
   }
@@ -251,11 +251,11 @@
   right: 32px;
   bottom: 0;
   z-index: 2;
-  @include tablet {
+  @include tablet() {
     width: 146px;
     right: 303px;
   }
-  @include desktop {
+  @include desktop() {
     width: 236px;
     right: 328px;
   }
@@ -292,13 +292,13 @@
   background-color: var(--accent-color);
   bottom: 75px;
   right: -62px;
-  @include tablet {
+  @include tablet() {
     height: 335px;
     width: 333px;
     bottom: 40px;
     right: 185px;
   }
-  @include desktop {
+  @include desktop() {
     height: 534px;
     width: 534px;
     bottom: 77px;
@@ -312,10 +312,10 @@
   right: 32px;
   bottom: 0px;
   z-index: 2;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 304px;
     right: 16px;
   }
