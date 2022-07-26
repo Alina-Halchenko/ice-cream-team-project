@@ -19,6 +19,7 @@
       #ffffff 51%,
       var(--bg-color-light) 51%
     );
+    padding-bottom: 0;
   }
 
   @include desktop() {

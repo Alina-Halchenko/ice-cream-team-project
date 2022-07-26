@@ -179,6 +179,8 @@
 .reviews_btn {
   width: 12px;
   height: 12px;
+  // если увеличить размер - домик видно, как его вприсать в эти 12рх? Голова не варит
+  @include centered();
 
   border-radius: 50%;
   border: 0;
@@ -193,6 +195,6 @@
   }
 }
 
-.reviews_btn.active {
-  background-image: url(../images/icon-title.svg);
+.reviews_btn .about__icon {
+  fill: var(--primary-color);
 }
