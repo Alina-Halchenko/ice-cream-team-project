@@ -1,47 +1,98 @@
 <!-- Header + navigation -->
-<header class="header">
+<header class="header" id="header">
   <div class="container">
     <div class="header-wrapper">
-      <a href="/">
+      <a href="./index.html" aria-label="site logo">
         <svg class="logo" width="199" height="50">
           <use href="./images/icons-sprite.svg#icon-logo"></use>
         </svg>
-        <!-- <img src="./images/icons-sprite.svg#icon-logo"> -->
       </a>
       <button type="button" class="header__btn-open">
-        <svg class="header__icon-btn" width="20" height="12">
+        <svg class="header__icon-btn" width="21" height="12">
           <use href="./images/icons-sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <nav class="desktop-nav" id="nav">
+        <ul class="desktop-nav__list">
+          <li class="desktop-nav__item">
+            <a href="#hero" data-scroll="#hero" class="desktop-nav__link active"
+              >Home</a
+            >
+          </li>
+          <li class="desktop-nav__item">
+            <a
+              href="#advantages"
+              data-scroll="#advantages"
+              class="desktop-nav__link"
+              >About us</a
+            >
+          </li>
+          <li class="desktop-nav__item">
+            <a href="#about" data-scroll="#about" class="desktop-nav__link"
+              >How it’s made?</a
+            >
+          </li>
+          <li class="desktop-nav__item">
+            <a
+              href="#products"
+              data-scroll="#products"
+              class="desktop-nav__link"
+              >Our products</a
+            >
+          </li>
+          <li class="desktop-nav__item">
+            <a
+              href="#contacts"
+              data-scroll="#contacts"
+              class="desktop-nav__link"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__btn-buy" data-modal-open>
+        Buy now
+        <svg class="buy__btn-arrow" width="5" height="8">
+          <use href="./images/icons-sprite.svg#icon-arrow-right-btn"></use>
         </svg>
       </button>
     </div>
     <nav class="menu is-hidden">
       <div class="mobile-container">
-        <button type="button" class="menu__btn-close">
+        <button type="button" class="menu__btn-close" aria-label="close button">
           <svg class="menu__close-icon" width="14" height="14">
-            <use href="./images/icons-sprite.svg#icon-arrow-right"></use>
+            <use href="./images/icons-sprite.svg#icon-menu-cross"></use>
           </svg>
         </button>
-        <button type="button" class="menu__btn-buy">
+        <button type="button" class="header__btn-buy header__btn-buy--mobile">
           Buy now
-          <svg class="buy__btn-arrow" width="5" height="8">
+          <svg class="buy__btn-arrow" width="6" height="9">
             <use href="./images/icons-sprite.svg#icon-arrow-right-btn"></use>
           </svg>
         </button>
         <ul class="nav">
           <li class="nav__item">
-            <a href="#header" class="nav__link">Home</a>
+            <a href="#hero" data-scroll="#hero" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="#advantages" class="nav__link">About us</a>
+            <a href="#advantages" data-scroll="#advantages" class="nav__link"
+              >About us</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">How it’s made?</a>
+            <a href="#about" data-scroll="#about" class="nav__link"
+              >How it’s made?</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#products" class="nav__link">Our products</a>
+            <a href="#products" data-scroll="#products" class="nav__link"
+              >Our products</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#contacts" class="nav__link">Contact</a>
+            <a href="#contacts" data-scroll="#contacts" class="nav__link"
+              >Contact</a
+            >
           </li>
         </ul>
       </div>

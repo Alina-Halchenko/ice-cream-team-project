@@ -1,5 +1,5 @@
 .hero {
-  background-color: var(--product-color-first);
+  background-color: var(--bg-color);
   padding-top: 194px;
   margin: 0 auto;
   height: 502px;
@@ -20,7 +20,7 @@
 }
 
 .hero__title {
-  z-index: 2;
+  z-index: 3;
   position: relative;
   width: 218px;
   font-family: var(--font-accent);
@@ -34,7 +34,7 @@
     @include font(400, 48px, 0.97, normal);
     color: var(--primary-color);
   }
-  @include tablet {
+  @include tablet() {
     width: 162px;
     &--white {
       font-size: 22px;
@@ -45,7 +45,7 @@
       line-height: 0.91;
     }
   }
-  @include desktop {
+  @include desktop() {
     width: 277px;
     margin-bottom: 24px;
     &--white {
@@ -62,10 +62,10 @@
   position: absolute;
   right: 32px;
   top: -10px;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     top: 5px;
   }
 }
@@ -83,13 +83,13 @@
   z-index: 2;
   background-color: var(--text-color-light);
   border-radius: 50%;
-  @include tablet {
+  @include tablet() {
     width: 16px;
     height: 16px;
     top: -2px;
     right: -8px;
   }
-  @include desktop {
+  @include desktop() {
     width: 30px;
     height: 30px;
     top: -4px;
@@ -103,7 +103,7 @@
   @include font(400, 28px, 1.14, 0.04em);
   text-transform: uppercase;
   color: var(--primary-color);
-  @include desktop {
+  @include desktop() {
     font-size: 46px;
     line-height: 1.15;
     margin-bottom: 2px;
@@ -114,7 +114,7 @@
   font-family: var(--font-main);
   @include font(400, 8px, 1.25, normal);
   color: var(--text-color-light);
-  @include desktop {
+  @include desktop() {
     font-size: 14px;
     line-height: 1.29;
   }
@@ -123,10 +123,13 @@
 .hero__list {
   display: flex;
   gap: 8px;
-  @include tablet {
+
+  position: relative;
+  z-index: 3;
+  @include tablet() {
     margin-bottom: 20px;
   }
-  @include desktop {
+  @include desktop() {
     margin-bottom: 40px;
     gap: 12px;
   }
@@ -161,7 +164,7 @@
       background-color: var(--btn-accent-color);
     }
   }
-  @include desktop {
+  @include desktop() {
     height: 40px;
     font-size: 14px;
     line-height: 1.29;
@@ -174,10 +177,10 @@
   left: 184px;
   bottom: 56px;
   width: 114px;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 200px;
     left: 229px;
     bottom: 84px;
@@ -188,7 +191,7 @@
   font-family: var(--font-main);
   @include font(400, 8px, 1.5, 0);
   color: var(--text-color-light);
-  @include desktop {
+  @include desktop() {
     font-size: 14px;
     line-height: 1.4;
   }
@@ -211,10 +214,10 @@
   &:hover {
     background-color: var(--btn-accent-color);
   }
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 26px;
     height: 26px;
   }
@@ -222,7 +225,7 @@
 
 .hero__btn-icon {
   fill: currentColor;
-  @include desktop {
+  @include desktop() {
     width: 10px;
     height: 11px;
   }
@@ -233,10 +236,10 @@
   width: 152px;
   bottom: 16px;
   z-index: 1;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 213px;
     bottom: 60px;
   }
@@ -247,14 +250,37 @@
   width: 171px;
   right: 32px;
   bottom: 0;
-  z-index: 1;
-  @include tablet {
+  z-index: 2;
+  @include tablet() {
     width: 146px;
     right: 303px;
   }
-  @include desktop {
+  @include desktop() {
     width: 236px;
     right: 328px;
+  }
+}
+
+.hero__img--prompt {
+  display: none;
+  @include desktop() {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 700px;
+    z-index: 3;
+
+    font-family: var(--font-accent);
+    font-size: 16px;
+    color: var(--primary-color);
+    text-shadow: 0 0 6px #fff, 2px 2px 10px #fff, -2px -2px 10px #fff;
+
+    opacity: 0;
+    transition: opacity var(--transition-prop);
+    pointer-events: none;
+
+    -webkit-animation: scale-up-center 2s linear 5s infinite reverse;
+    animation: scale-up-center 2s linear 5s infinite reverse;
   }
 }
 
@@ -266,13 +292,13 @@
   background-color: var(--accent-color);
   bottom: 75px;
   right: -62px;
-  @include tablet {
+  @include tablet() {
     height: 335px;
     width: 333px;
     bottom: 40px;
     right: 185px;
   }
-  @include desktop {
+  @include desktop() {
     height: 534px;
     width: 534px;
     bottom: 77px;
@@ -286,11 +312,53 @@
   right: 32px;
   bottom: 0px;
   z-index: 2;
-  @include mobile-only {
+  @include mobile-only() {
     display: none;
   }
-  @include desktop {
+  @include desktop() {
     width: 304px;
     right: 16px;
+  }
+}
+
+// schemes styles
+
+.coffee-scheme {
+  --primary-color: #ce7336;
+  --accent-color: #e8c086;
+
+  --btn-primary-color: #cc7236;
+
+  --bg-color: #f0d1a5;
+  --bg-color-light: #fff9f5;
+  --icon-bg-color: #fed4a5;
+
+  .hero__img--prompt {
+    top: 240px;
+    left: 760px;
+  }
+}
+
+.green-scheme {
+  --primary-color: #24c44c;
+  --accent-color: #acd17b;
+
+  --btn-primary-color: #24c44c;
+
+  --bg-color: #c2e297;
+  --bg-color-light: #f5fff5;
+  --icon-bg-color: #acfea5;
+
+  .hero__img--prompt {
+    top: 320px;
+    left: 730px;
+  }
+}
+
+.map {
+  display: none;
+
+  @include desktop() {
+    display: inline;
   }
 }

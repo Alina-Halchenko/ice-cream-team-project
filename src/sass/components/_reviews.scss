@@ -1,0 +1,200 @@
+.reviews {
+  padding-top: var(--section-padding);
+}
+
+.reviews .container {
+  @include tablet {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+  @include desktop {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
+.reviews__img {
+  height: 85px;
+  border-radius: 44px;
+  margin: 0 auto 32px auto;
+  @include tablet {
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.reviews__bg {
+  padding: 43px 50px 17px;
+  position: relative;
+  z-index: -2;
+
+  background-color: #fafafa;
+
+  @include tablet-only() {
+    padding: 20px 6px 36px;
+  }
+
+  @include desktop() {
+    padding: 47px 74px 32px 72px;
+  }
+
+  &::after {
+    content: ". . .";
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    color: #c7133e;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include tablet-only {
+      bottom: -20px;
+    }
+    @include desktop {
+      bottom: -36px;
+    }
+  }
+}
+
+.reviews__bg-line {
+  padding: 0 8px 0 15px;
+
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 29.6px,
+    #e1e1e1 29.6px,
+    #e1e1e1 30.6px
+  );
+
+  @include tablet-only() {
+    padding: 0 49px 0 45px;
+
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 29.1px,
+      #e1e1e1 29.1px,
+      #e1e1e1 30.1px
+    );
+  }
+
+  @include desktop() {
+    background-image: repeating-linear-gradient(
+      transparent,
+      transparent 28.76px,
+      #e1e1e1 28.76px,
+      #e1e1e1 29.76px
+    );
+  }
+}
+
+.reviews__text {
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include font(500, 12px, 2.55, 0);
+  text-align: center;
+  color: var(--text-color-main);
+
+  @include tablet {
+    padding: 0;
+    width: 514px;
+    font-size: 14px;
+    line-height: 2.16;
+  }
+  @include desktop {
+    width: 750px;
+    font-size: 16px;
+    line-height: 1.86;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    left: -12px;
+    top: -12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews/quotes.png);
+
+    @include tablet-only() {
+      left: -45px;
+      top: -17px;
+      width: 60.35px;
+    }
+
+    @include desktop() {
+      left: -37px;
+      top: -15px;
+      width: 54px;
+    }
+  }
+}
+
+.reviews__name {
+  margin-top: 36px;
+  @include font(500, 14px, 1.86, 0);
+  text-align: center;
+  color: var(--text-color-main);
+
+  @include tablet-only {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+  @include desktop {
+    margin-top: 36px;
+    font-size: 20px;
+  }
+}
+
+.reviews__list {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.reviews__nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+
+  @include tablet-only() {
+    margin-top: 32px;
+  }
+}
+
+.reviews__nav-item:not(:last-child) {
+  margin-right: 18px;
+}
+
+.reviews_btn {
+  width: 12px;
+  height: 12px;
+  // если увеличить размер - домик видно, как его вприсать в эти 12рх? Голова не варит
+  @include centered();
+
+  border-radius: 50%;
+  border: 0;
+
+  background: #d9d9d9;
+  transition: transform var(--transition-prop),
+    background-image var(--transition-prop);
+
+  &:focus,
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.reviews_btn .about__icon {
+  fill: var(--primary-color);
+}

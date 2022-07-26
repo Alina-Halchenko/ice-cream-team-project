@@ -1,0 +1,52 @@
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  margin-top: 8px;
+
+  @include tablet() {
+    margin-top: 24px;
+  }
+}
+
+.slick-dots li {
+  margin: 0 9px;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  border: 0;
+}
+
+.slick-dots button:hover {
+  cursor: pointer;
+}
+
+li.slick-active button {
+  font-size: 0;
+  border-radius: 0;
+  background-color: #fff;
+  border: 0;
+  width: 12.4px;
+  height: 11.84px;
+  background-image: url("../images/reviews/carousel-home.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+li.slick-active button:hover {
+  cursor: pointer;
+}
