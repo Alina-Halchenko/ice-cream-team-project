@@ -346,6 +346,45 @@
   .hero__img--coffee {
     z-index: 3;
   }
+
+  .about__img--coffee {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .about__img--pink {
+    opacity: 0;
+  }
+
+  .about {
+  @include desktop() {
+      background-image: url(../images/about/milk-bg-desk-peach.png);
+  }
+
+  @include retina() {
+    background-image: url(../images/about/milk-bg-desk-peach@2.png);
+  }
+}
+
+.about__wrap {
+  background-image: url(../images/about/milk-bg-mob-peach.png);
+
+  @include retina() {
+    background-image: url(../images/about/milk-bg-mob-peach@2.png);
+  }
+}
+
+.advantages__item:nth-child(1) .advantages__amount::before {
+        background-image: url("../images/advantages-svg/milk-peach.svg");
+    }
+
+.advantages__item:nth-child(2) .advantages__amount::before {
+        background-image: url("../images/advantages-svg/apples-peach.svg");
+    }
+
+.advantages__item:nth-child(3) .advantages__amount::before {
+        background-image: url("../images/advantages-svg/heart-peach.svg");
+    }
 }
 
 .green-scheme {
@@ -370,6 +409,46 @@
     .hero__img--green {
       z-index: 3;
     }
+
+    .about__img--green {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .about__img--pink {
+          opacity: 0;
+    }
+
+  .about {
+    @include desktop() {  
+      background-image: url(../images/about/milk-bg-desk-lime.png);
+    }
+
+    @include retina() {
+      background-image: url(../images/about/milk-bg-desk-lime@2.png);
+    }
+  }
+
+  .about__wrap {
+  background-image: url(../images/about/milk-bg-mob-lime.png);
+
+  @include retina() {
+    background-image: url(../images/about/milk-bg-mob-lime@2.png);
+  }
+  }
+
+  .advantages__item:nth-child(1) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/milk-lime.svg");
+  }
+
+  .advantages__item:nth-child(2) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/apples-lime.svg");
+  }
+
+  .advantages__item:nth-child(3) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/heart-lime.svg");    
+  }
+
 }
 
 .map {
