@@ -203,6 +203,9 @@
     @include tablet {
         margin-right: 20px;
     }
+    @include mobile-only {
+        width: 100%;
+    }
   }
 
   .buy-modal-wrapper {
@@ -229,6 +232,7 @@ width: 80%;
   font-size: 14px;
   @include mobile-only {
     height: 50px;
+    width: 100%;
   }
   .modal-wrapper:focus-within & {
     border: 1px solid var(--accent-color);
@@ -245,7 +249,7 @@ width: 80%;
   }
 
 .modal-textarea__wrapper {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     @include tablet {
         display: flex;
         margin-bottom: 20px;
