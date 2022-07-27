@@ -1,5 +1,9 @@
 .reviews {
   padding-top: var(--section-padding);
+
+  @include tablet-only() {
+    padding-bottom: 20px;
+  }
 }
 
 .reviews .container {

@@ -76,7 +76,12 @@
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
-  &:active {
+
+  transition: color var(--transition-prop);
+
+  &:active,
+  &:focus,
+  &:hover {
     color: var(--primary-color);
   }
 }

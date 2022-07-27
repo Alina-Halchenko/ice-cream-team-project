@@ -1,8 +1,9 @@
 .gallery {
+    padding-top: var(--section-padding);
     background-image: linear-gradient(
         to bottom,
-        var(--bg-color-light) 20%,
-        #ffffff 20%
+        var(--bg-color-light) 44%,
+        #ffffff 44%
     );
     @include tablet() {
         background-image: linear-gradient(
@@ -12,7 +13,7 @@
         );
     }
     @include desktop() {
-        padding: var(--section-padding) 0;
+        padding-bottom: var(--section-padding);
         background-image: linear-gradient(
             to bottom,
             var(--bg-color-light) 27%,

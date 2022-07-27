@@ -1,13 +1,11 @@
 .about {
-  padding-bottom: 40px;
   padding-top: var(--section-padding);
   background-color: var(--bg-color-light);
 
-  @include tablet-only() {
-    padding-bottom: var(--section-padding);
+  @include tablet() {
+    padding-bottom: 0;
   }
   @include desktop() {
-    padding-bottom: 0;
     overflow: hidden;
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
