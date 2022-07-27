@@ -90,6 +90,11 @@
     color: var(--primary-color);
 
     transition: background-color var(--transition-prop);
+    animation-name: shadow-drop-center;
+    // change-color;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
     &:hover,
     &:focus {
