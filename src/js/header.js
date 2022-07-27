@@ -49,3 +49,22 @@ $(function() {
     });
 
 });
+
+//Buy now
+
+(() => {
+    const refs = {
+      openBuymodalBtn: document.querySelector('[data-buy-open]'),
+      closeBuymodalBtn: document.querySelector('[data-buy-close]'),
+      buymodal: document.querySelector('[data-buy]'),
+      body: document.querySelector('body'),
+    };
+  
+    refs.openBuymodalBtn.addEventListener('click', toggleBuymodal);
+    refs.closeBuymodalBtn.addEventListener('click', toggleBuymodal);
+  
+    function toggleBuymodal() {
+      refs.buymodal.classList.toggle('is-hidden');
+      refs.body.classList.toggle('no-scroll');
+    }
+  })();
