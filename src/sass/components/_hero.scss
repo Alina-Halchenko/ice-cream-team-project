@@ -322,42 +322,6 @@
   }
 }
 
-// schemes styles
-
-.coffee-scheme {
-  --primary-color: #ce7336;
-  --accent-color: #e8c086;
-
-  --btn-primary-color: #cc7236;
-
-  --bg-color: #f0d1a5;
-  --bg-color-light: #fff9f5;
-  --icon-bg-color: #fed4a5;
-  --btn-hero-color: #f19f52;
-
-  .hero__img--prompt {
-    top: 240px;
-    left: 760px;
-  }
-}
-
-.green-scheme {
-  --primary-color: #24c44c;
-  --accent-color: #acd17b;
-
-  --btn-primary-color: #24c44c;
-
-  --bg-color: #c2e297;
-  --bg-color-light: #f5fff5;
-  --icon-bg-color: #acfea5;
-  --btn-hero-color: #52f17a;
-
-  .hero__img--prompt {
-    top: 320px;
-    left: 730px;
-  }
-}
-
 .map {
   display: none;
 
