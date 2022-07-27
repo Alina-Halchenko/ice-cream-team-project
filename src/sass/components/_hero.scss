@@ -339,6 +339,10 @@
     top: 240px;
     left: 760px;
   }
+
+  .hero__img--coffee {
+    z-index: 3;
+  }
 }
 
 .green-scheme {
@@ -356,6 +360,10 @@
     top: 320px;
     left: 730px;
   }
+
+    .hero__img--green {
+      z-index: 3;
+    }
 }
 
 .map {
