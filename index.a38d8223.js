@@ -1,0 +1,2 @@
+$((function(){let o=$("#header"),l=$("#hero").innerHeight(),e=$(window).scrollTop();function t(e){e>=l?o.addClass("fixed"):o.removeClass("fixed")}t(e),$(window).on("scroll",(function(){e=$(this).scrollTop(),t(e)})),$("[data-scroll]").on("click",(function(o){o.preventDefault();let l=$(this),e=l.data("scroll"),t=$(e).offset().top;$("#nav a").removeClass("active"),l.addClass("active"),$("html, body").animate({scrollTop:t},500)}))}));
+//# sourceMappingURL=index.a38d8223.js.map
