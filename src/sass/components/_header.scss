@@ -1,3 +1,14 @@
+.logo {
+    fill: var(--primary-color);
+    height: 50px;
+    width: 150px;
+
+    .header.fixed & {
+        height: 35px;
+        width: 105px;
+    }
+}
+
 .header {
     position: absolute;
     top: 0;
@@ -13,6 +24,7 @@
 
 .header-wrapper {
     display: flex;
+    align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
     @include mobile-only() {
@@ -24,12 +36,11 @@
     @include desktop() {
         justify-content: space-between;
         padding-top: 37px;
-        align-items: center;
     }
 }
 .header.fixed .header-wrapper {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .header__btn-open {
@@ -65,10 +76,13 @@
     justify-content: center;
     align-items: center;
     min-width: 160px;
-    height: 44px;
+    min-height: 44px;
     border-radius: 22px;
+    padding: 5px 10px;
+
     background-color: #fff;
     border: 0;
+
     font-family: var(--font-main);
     font-weight: 700;
     font-size: 16px;
@@ -95,6 +109,13 @@
         padding: 8px 16px;
         min-width: 209px;
     }
+
+    .header.fixed & {
+        min-width: 114px;
+        min-height: 34px;
+
+        font-size: 12px;
+    }
 }
 
 .desktop-nav__item {
@@ -115,8 +136,4 @@
     &.active {
         color: var(--primary-color);
     }
-}
-
-.logo {
-    fill: var(--primary-color);
 }

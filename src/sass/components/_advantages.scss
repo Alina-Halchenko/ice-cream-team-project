@@ -1,5 +1,14 @@
 .advantages {
     background-color: var(--bg-color-light);
+    padding-top: 40px;
+
+    @include tablet() {
+        padding-top: var(--section-padding);
+    }
+
+    @include desktop() {
+        padding-bottom: 45px;
+    }
 
     &__list {
         @include tablet() {
