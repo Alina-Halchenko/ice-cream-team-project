@@ -6,6 +6,7 @@
     padding-bottom: 0;
   }
   @include desktop() {
+    padding-bottom: var(--section-padding);
     overflow: hidden;
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
@@ -57,11 +58,8 @@
 .about__column img {
   margin-left: auto;
   margin-right: auto;
-  // position: absolute;
+  position: absolute;
 
-  @include tablet() {
-    position: absolute;
-  }
 }
 
 .about__img--coffee,
@@ -71,6 +69,10 @@
 
 .about__column--first {
   margin-bottom: 40px;
+
+  @include mobile-only() {
+    min-height: 279px;
+  }
 
   @include tablet-only() {
     min-width: 336px;

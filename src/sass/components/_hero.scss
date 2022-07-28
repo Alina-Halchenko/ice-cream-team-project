@@ -359,18 +359,21 @@
   .about {
     @include desktop() {
       background-image: url(../images/about/milk-bg-desk-peach.png);
-    }
+    
 
-    @include retina() {
-      background-image: url(../images/about/milk-bg-desk-peach@2.png);
+      @include retina() {
+        background-image: url(../images/about/milk-bg-desk-peach@2.png);
+      }
     }
   }
 
   .about__wrap {
-    background-image: url(../images/about/milk-bg-mob-peach.png);
+    @include mobile-only(){
+      background-image: url(../images/about/milk-bg-mob-peach.png);
 
-    @include retina() {
-      background-image: url(../images/about/milk-bg-mob-peach@2.png);
+      @include retina() {
+        background-image: url(../images/about/milk-bg-mob-peach@2.png);
+      }
     }
   }
 
@@ -422,18 +425,22 @@
   .about {
     @include desktop() {
       background-image: url(../images/about/milk-bg-desk-lime.png);
-    }
+    
 
-    @include retina() {
-      background-image: url(../images/about/milk-bg-desk-lime@2.png);
+      @include retina() {
+        background-image: url(../images/about/milk-bg-desk-lime@2.png);
+      }
     }
   }
 
   .about__wrap {
-    background-image: url(../images/about/milk-bg-mob-lime.png);
+    @include mobile-only{ 
+      background-image: url(../images/about/milk-bg-mob-lime.png);
 
-    @include retina() {
-      background-image: url(../images/about/milk-bg-mob-lime@2.png);
+      @include retina() {
+        background-image: url(../images/about/milk-bg-mob-lime@2.png);
+      
+      }
     }
   }
 
