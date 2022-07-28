@@ -369,17 +369,19 @@
         background-image: url(../images/about/milk-bg-desk-peach@2.png);
       }
     }
-  }
 
-  .about__wrap {
-    @include mobile-only(){
-      background-image: url(../images/about/milk-bg-mob-peach.png);
-
-      @include retina() {
-        background-image: url(../images/about/milk-bg-mob-peach@2.png);
+    &--mob {
+      @include mobile-only() {
+        background-image: url(../images/about/milk-bg-mob-peach.png);
+      
+        @include retina() {
+          background-image: url(../images/about/milk-bg-mob-peach@2.png);
+        }
       }
     }
   }
+
+  
 
   .advantages__item:nth-child(1) .advantages__amount::before {
     background-image: url("../images/advantages-svg/milk-peach.svg");
@@ -435,15 +437,13 @@
         background-image: url(../images/about/milk-bg-desk-lime@2.png);
       }
     }
-  }
-
-  .about__wrap {
-    @include mobile-only{ 
-      background-image: url(../images/about/milk-bg-mob-lime.png);
-
-      @include retina() {
-        background-image: url(../images/about/milk-bg-mob-lime@2.png);
-      
+    &--mob {
+      @include mobile-only() {
+        background-image: url(../images/about/milk-bg-mob-lime.png);
+    
+        @include retina() {
+          background-image: url(../images/about/milk-bg-mob-lime@2.png);
+        }
       }
     }
   }

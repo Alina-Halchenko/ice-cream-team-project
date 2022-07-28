@@ -25,6 +25,21 @@
         background-image: url(../images/about/milk-bg-desk@2.png);
       }
     }
+    
+    &--mob {
+      background-image: url(../images/about/milk-bg-mob.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-y: 35%;
+
+      @include retina() {
+        background-image: url(../images/about/milk-bg-mob@2.png);
+      }
+
+      @include tablet() {
+        background-image: none;
+      }
+    }
   }
 }
 
@@ -42,24 +57,12 @@
 .about__wrap {
   min-width: 280px;
 
-  background-image: url(../images/about/milk-bg-mob.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: 35%;
-
-  @include retina() {
-    background-image: url(../images/about/milk-bg-mob@2.png);
-  }
-
   @include tablet() {
     display: flex;
-    flex-direction: row;
-    background-image: none;
   }
 }
 .about__column img {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   position: absolute;
 
 }
