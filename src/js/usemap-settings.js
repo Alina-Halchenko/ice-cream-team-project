@@ -4,7 +4,9 @@
     const coffeeSwitcher = document.querySelector(".schemes__circle--coffee");
     const greenSwitcher = document.querySelector(".schemes__circle--green");
 if (window.matchMedia("(max-width: 767px)").matches) {
-activeHeroImage.removeAttribute("usemap");
+    activeHeroImage.removeAttribute("usemap");
+    document.querySelector(".about__img--coffee").remove();
+    document.querySelector(".about__img--green").remove();
     }
     
 else if (window.matchMedia("(max-width: 1199px)").matches) {    

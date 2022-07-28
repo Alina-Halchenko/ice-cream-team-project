@@ -5,9 +5,7 @@
   @include tablet() {
     padding-bottom: 0;
   }
-}
 
-.about .container {
   @include desktop() {
     padding-bottom: var(--section-padding);
     overflow: hidden;

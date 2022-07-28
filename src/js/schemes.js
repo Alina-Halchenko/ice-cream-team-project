@@ -1,7 +1,7 @@
 window.onload = () => {
     console.log(document.documentElement.clientWidth);
-    if (document.documentElement.clientWidth >= 1200) {
-      (() => {
+    if (document.documentElement.clientWidth >= 768) {
+    (() => {
     const pinkSwitcher = document.querySelector(".schemes__circle--pink");
     const body = document.querySelector("body");
 
