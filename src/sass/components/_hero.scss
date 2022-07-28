@@ -329,7 +329,7 @@
   --accent-color: #e8c086;
 
   --btn-primary-color: #cc7236;
-  
+
   --line-menu-color: #b38b58;
 
   --bg-color: #f0d1a5;
@@ -357,34 +357,34 @@
   }
 
   .about {
-  @include desktop() {
+    @include desktop() {
       background-image: url(../images/about/milk-bg-desk-peach.png);
-  }
-
-  @include retina() {
-    background-image: url(../images/about/milk-bg-desk-peach@2.png);
-  }
-}
-
-.about__wrap {
-  background-image: url(../images/about/milk-bg-mob-peach.png);
-
-  @include retina() {
-    background-image: url(../images/about/milk-bg-mob-peach@2.png);
-  }
-}
-
-.advantages__item:nth-child(1) .advantages__amount::before {
-        background-image: url("../images/advantages-svg/milk-peach.svg");
     }
 
-.advantages__item:nth-child(2) .advantages__amount::before {
-        background-image: url("../images/advantages-svg/apples-peach.svg");
+    @include retina() {
+      background-image: url(../images/about/milk-bg-desk-peach@2.png);
     }
+  }
 
-.advantages__item:nth-child(3) .advantages__amount::before {
-        background-image: url("../images/advantages-svg/heart-peach.svg");
+  .about__wrap {
+    background-image: url(../images/about/milk-bg-mob-peach.png);
+
+    @include retina() {
+      background-image: url(../images/about/milk-bg-mob-peach@2.png);
     }
+  }
+
+  .advantages__item:nth-child(1) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/milk-peach.svg");
+  }
+
+  .advantages__item:nth-child(2) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/apples-peach.svg");
+  }
+
+  .advantages__item:nth-child(3) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/heart-peach.svg");
+  }
 }
 
 .green-scheme {
@@ -406,21 +406,21 @@
     left: 730px;
   }
 
-    .hero__img--green {
-      z-index: 3;
-    }
+  .hero__img--green {
+    z-index: 3;
+  }
 
-    .about__img--green {
-      z-index: 2;
-      opacity: 1;
-    }
+  .about__img--green {
+    z-index: 2;
+    opacity: 1;
+  }
 
-    .about__img--pink {
-          opacity: 0;
-    }
+  .about__img--pink {
+    opacity: 0;
+  }
 
   .about {
-    @include desktop() {  
+    @include desktop() {
       background-image: url(../images/about/milk-bg-desk-lime.png);
     }
 
@@ -430,11 +430,11 @@
   }
 
   .about__wrap {
-  background-image: url(../images/about/milk-bg-mob-lime.png);
+    background-image: url(../images/about/milk-bg-mob-lime.png);
 
-  @include retina() {
-    background-image: url(../images/about/milk-bg-mob-lime@2.png);
-  }
+    @include retina() {
+      background-image: url(../images/about/milk-bg-mob-lime@2.png);
+    }
   }
 
   .advantages__item:nth-child(1) .advantages__amount::before {
@@ -446,11 +446,13 @@
   }
 
   .advantages__item:nth-child(3) .advantages__amount::before {
-    background-image: url("../images/advantages-svg/heart-lime.svg");    
+    background-image: url("../images/advantages-svg/heart-lime.svg");
   }
-
 }
 
+.schemes__circle--coffee,
+.schemes__circle--green,
+.schemes__circle--pink,
 .map {
   display: none;
 

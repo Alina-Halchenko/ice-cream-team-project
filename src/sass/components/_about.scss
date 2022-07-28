@@ -55,17 +55,13 @@
   }
 }
 .about__column img {
-  
   margin-left: auto;
   margin-right: auto;
+  // position: absolute;
 
   @include tablet() {
     position: absolute;
-
   }
-  // @include desktop() {
-  //   position: absolute;
-  // }
 }
 
 .about__img--coffee,
