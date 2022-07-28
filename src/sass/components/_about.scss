@@ -7,7 +7,7 @@
   }
 }
 
-.about .container {
+.about {
   @include desktop() {
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
