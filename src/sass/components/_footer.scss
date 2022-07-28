@@ -10,7 +10,9 @@
 .footer .container {
   background-color: var(--bg-color-light);
   padding-bottom: 40px;
-  @include tablet {
+
+  border-bottom: 1px solid #e1e1e1;
+  @include tablet() {
     display: flex;
     justify-content: space-between;
     padding-left: 16px;
@@ -24,10 +26,12 @@
 
 .footer__slogan {
   max-width: 234px;
-  @include tablet {
+  margin-bottom: 40px;
+  @include tablet() {
     max-width: 340px;
+    margin-bottom: 0;
   }
-  @include desktop {
+  @include desktop() {
     max-width: 477px;
   }
 }
@@ -42,14 +46,14 @@
   color: var(--accent-color);
   margin-bottom: 16px;
 
-  @include tablet {
+  @include tablet() {
     font-size: 26px;
     line-height: 1.15;
     letter-spacing: 0.04em;
     margin-bottom: 12px;
   }
 
-  @include desktop {
+  @include desktop() {
     font-size: 30px;
     line-height: 1.13;
   }
@@ -64,26 +68,24 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--primary-color);
-  margin-bottom: 40px;
 
-  @include tablet {
+  @include tablet() {
     font-size: 48px;
-    margin-bottom: 0;
     letter-spacing: 0.06em;
     color: var(--primary-color);
   }
 
-  @include desktop {
+  @include desktop() {
     font-size: 58px;
     line-height: 1.14;
   }
 }
 
 .footer__contacts {
-  @include tablet {
+  @include tablet() {
     margin-top: 60px;
   }
-  @include desktop {
+  @include desktop() {
     margin-top: 12px;
   }
 }
@@ -130,11 +132,11 @@
   font-size: 12px;
   line-height: 1.86;
 
-  @include tablet {
+  @include tablet() {
     font-size: 14px;
   }
 
-  @include desktop {
+  @include desktop() {
     font-size: 16px;
     letter-spacing: 0.02em;
   }
@@ -148,11 +150,11 @@
   line-height: 1.86;
   color: var(--primary-color);
 
-  @include tablet {
+  @include tablet() {
     font-size: 14px;
   }
 
-  @include desktop {
+  @include desktop() {
     font-size: 16px;
     letter-spacing: 0.02em;
   }
@@ -164,26 +166,25 @@
 }
 
 .footer__copyright {
-  display: block;
+  width: 150px;
+  margin: 0 auto;
   padding-top: 16px;
   padding-bottom: 3px;
   background-color: var(--bg-color-light);
-  border-top: 1px solid #e1e1e1;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.52;
   text-align: center;
   color: var(--text-color-accent);
 
-  @include tablet {
-    display: flex;
+  @include tablet() {
+    width: 100%;
     line-height: 1.86;
     padding-top: 8px;
     padding-bottom: 8px;
-    justify-content: center;
   }
 
-  @include tablet {
+  @include tablet() {
     padding-top: 7px;
     padding-bottom: 4px;
   }

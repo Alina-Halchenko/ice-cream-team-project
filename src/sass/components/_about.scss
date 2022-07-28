@@ -5,6 +5,9 @@
   @include tablet() {
     padding-bottom: 0;
   }
+}
+
+.about .container {
   @include desktop() {
     padding-bottom: var(--section-padding);
     overflow: hidden;
@@ -150,6 +153,8 @@
   border-radius: 22px;
   text-align: left;
   cursor: pointer;
+
+  transition: background-color var(--transition-prop);
 
   &:hover,
   &:focus {

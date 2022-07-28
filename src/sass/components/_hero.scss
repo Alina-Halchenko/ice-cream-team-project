@@ -1,9 +1,10 @@
 .hero {
-  background-color: var(--bg-color);
   padding-top: 194px;
   margin: 0 auto;
   height: 502px;
   overflow: hidden;
+  background-color: var(--bg-color);
+
   @media screen and (min-width: 768px) {
     height: 416px;
     padding-top: 102px;
@@ -76,24 +77,26 @@
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 16px;
-}
 
-.department__circle {
-  position: absolute;
-  z-index: 2;
-  background-color: var(--text-color-light);
-  border-radius: 50%;
-  @include tablet() {
-    width: 16px;
-    height: 16px;
-    top: -2px;
-    right: -8px;
-  }
-  @include desktop() {
-    width: 30px;
-    height: 30px;
-    top: -4px;
-    right: -18px;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--text-color-light);
+    border-radius: 50%;
+    @include tablet() {
+      width: 16px;
+      height: 16px;
+      top: -2px;
+      right: -8px;
+    }
+    @include desktop() {
+      width: 30px;
+      height: 30px;
+      top: -4px;
+      right: -18px;
+    }
   }
 }
 
