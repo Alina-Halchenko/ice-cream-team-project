@@ -19,6 +19,11 @@
 
 .products__item {
   width: 100%;
+  margin-top: 62px;
+
+  @include tablet-only() {
+    margin-top: 18px;
+  }
 }
 
 .products__item::before {
@@ -30,7 +35,6 @@
   width: 100%;
   height: 280px;
   margin-bottom: -200px;
-  margin-top: 62px;
 
   transform: translateY(-62px);
 
@@ -43,7 +47,6 @@
 
   @include tablet-only() {
     height: 307px;
-    margin-top: 18px;
 
     @include retina {
       background-size: 224px 224px;
@@ -52,7 +55,6 @@
 
   @include desktop {
     height: 394px;
-    margin-top: 62px;
 
     @include retina {
       background-size: 368px 394px;

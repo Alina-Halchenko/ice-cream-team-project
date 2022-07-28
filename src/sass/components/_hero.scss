@@ -131,6 +131,7 @@
   z-index: 3;
   @include tablet() {
     margin-bottom: 20px;
+    width: 40%;
   }
   @include desktop() {
     margin-bottom: 40px;
@@ -325,6 +326,144 @@
   }
 }
 
+// schemes styles
+
+.coffee-scheme {
+  --primary-color: #ce7336;
+  --accent-color: #e8c086;
+
+  --btn-primary-color: #cc7236;
+
+  --line-menu-color: #b38b58;
+
+  --bg-color: #f0d1a5;
+  --bg-color-light: #fff9f5;
+  --icon-bg-color: #fed4a5;
+  --bg-menu-color: #d6a05a;
+  --btn-hero-color: #f19f52;
+
+  .hero__img--prompt {
+    top: 240px;
+    left: 760px;
+  }
+
+  .hero__img--coffee {
+    z-index: 3;
+  }
+
+  .about__img--coffee {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .about__img--pink {
+    opacity: 0;
+  }
+
+  .about__bg {
+    @include desktop() {
+      background-image: url(../images/about/milk-bg-desk-peach.png);
+    
+
+      @include retina() {
+        background-image: url(../images/about/milk-bg-desk-peach@2.png);
+      }
+    }
+
+    &--mob {
+      @include mobile-only() {
+        background-image: url(../images/about/milk-bg-mob-peach.png);
+      
+        @include retina() {
+          background-image: url(../images/about/milk-bg-mob-peach@2.png);
+        }
+      }
+    }
+  }
+
+  
+
+  .advantages__item:nth-child(1) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/milk-peach.svg");
+  }
+
+  .advantages__item:nth-child(2) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/apples-peach.svg");
+  }
+
+  .advantages__item:nth-child(3) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/heart-peach.svg");
+  }
+}
+
+.green-scheme {
+  --primary-color: #24c44c;
+  --accent-color: #acd17b;
+
+  --btn-primary-color: #24c44c;
+
+  --line-menu-color: #91cc76;
+
+  --bg-color: #c2e297;
+  --bg-color-light: #f5fff5;
+  --icon-bg-color: #acfea5;
+  --bg-menu-color: #91e179;
+  --btn-hero-color: #52f17a;
+
+  .hero__img--prompt {
+    top: 320px;
+    left: 730px;
+  }
+
+  .hero__img--green {
+    z-index: 3;
+  }
+
+  .about__img--green {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .about__img--pink {
+    opacity: 0;
+  }
+
+  .about__bg {
+    @include desktop() {
+      background-image: url(../images/about/milk-bg-desk-lime.png);
+    
+
+      @include retina() {
+        background-image: url(../images/about/milk-bg-desk-lime@2.png);
+      }
+    }
+    &--mob {
+      @include mobile-only() {
+        background-image: url(../images/about/milk-bg-mob-lime.png);
+    
+        @include retina() {
+          background-image: url(../images/about/milk-bg-mob-lime@2.png);
+        }
+      }
+    }
+  }
+
+  .advantages__item:nth-child(1) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/milk-lime.svg");
+  }
+
+  .advantages__item:nth-child(2) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/apples-lime.svg");
+  }
+
+  .advantages__item:nth-child(3) .advantages__amount::before {
+    background-image: url("../images/advantages-svg/heart-lime.svg");
+  }
+}
+
+.schemes__circle--coffee,
+.schemes__circle--green,
+.schemes__circle--pink,
 .map {
   display: none;
 
