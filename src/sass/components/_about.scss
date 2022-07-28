@@ -14,6 +14,18 @@
     background-repeat: no-repeat;
     background-position: right 241px;
 
+    @media screen and (min-width: 1250px) { 
+    background-position: right 220px;
+    }
+    @media screen and (min-width: 1400px) { 
+      background-position: right 145px;
+      }
+    @media screen and (min-width: 1600px) { 
+      background-position: right 100px;
+      }   
+    @media screen and (min-width: 1700px) { 
+      background-position: right top;
+      } 
     @include retina() {
       background-image: url(../images/about/milk-bg-desk@2.png);
     }
