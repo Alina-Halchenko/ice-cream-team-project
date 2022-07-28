@@ -24,7 +24,8 @@
       background-position: right 100px;
       }   
     @media screen and (min-width: 1700px) { 
-      background-position: right top;
+      background-position: center 100px;
+      background-size: contain;
       } 
     @include retina() {
       background-image: url(../images/about/milk-bg-desk@2.png);
