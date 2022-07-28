@@ -11,6 +11,11 @@
     }
 
     &__list {
+        @include mobile-only() {
+            width: 230px;
+            padding-right: 15px;
+        }
+
         @include tablet() {
             display: flex;
             flex-wrap: wrap;
@@ -91,9 +96,6 @@
     }
 
     &__text {
-        width: 230px;
-        padding-right: 15px;
-
         font-family: "DM Sans";
 
         @include font(700, 12, 1.7, null);

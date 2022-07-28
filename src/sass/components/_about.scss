@@ -5,8 +5,10 @@
   @include tablet() {
     padding-bottom: 0;
   }
+}
+
+.about .container {
   @include desktop() {
-    overflow: hidden;
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -143,6 +145,8 @@
   border-radius: 22px;
   text-align: left;
   cursor: pointer;
+
+  transition: background-color var(--transition-prop);
 
   &:hover,
   &:focus {

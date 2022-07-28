@@ -76,12 +76,13 @@
 }
 
 .contacts__paragraph {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
 
   @include tablet() {
     max-width: 224px;
 
-    margin-bottom: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -148,14 +149,19 @@
 .contacts__timetable {
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-bottom: 24px;
-  border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
 
   @include tablet() {
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-bottom: 32px;
+  }
+
+  & li:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include tablet() {
+      margin-bottom: 12px;
+    }
   }
 }
 
@@ -184,11 +190,11 @@
   }
 }
 
-.contacts__time:not(:last-child) {
-  margin-bottom: 8px;
+.contacts__phone-mail {
+  padding-top: 24px;
 
   @include tablet() {
-    margin-bottom: 12px;
+    padding-top: 32px;
   }
 }
 
@@ -256,11 +262,6 @@
   @include desktop() {
     min-width: 168px;
   }
-}
-
-.contacts__btn-text {
-  display: inline-block;
-  margin-bottom: 3px;
 }
 
 .contacts__btn-icon {
