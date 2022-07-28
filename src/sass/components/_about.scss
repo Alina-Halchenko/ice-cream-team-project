@@ -44,15 +44,8 @@
 
   background-image: url(../images/about/milk-bg-mob.png);
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: right 395px;
-
-  @media screen and (min-width: 330px) {
-    background-position: right 380px;
-  }
-  @media screen and (min-width: 403px) {
-    background-position: right 357px;
-  }
+  background-size: contain;
+  background-position-y: 35%;
 
   @include retina() {
     background-image: url(../images/about/milk-bg-mob@2.png);

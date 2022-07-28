@@ -26,7 +26,7 @@
 //mixins for @media
 //use, for example:  @include desktop() {...}
 @mixin mobile-only() {
-  @media screen and (min-width: $mobile) and (max-width: ($tablet - 0.1px)) {
+  @media screen and (max-width: ($tablet - 0.1px)) {
     @content;
   }
 }
