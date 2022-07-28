@@ -5,40 +5,17 @@
   @include tablet() {
     padding-bottom: 0;
   }
+}
 
+.about .container {
   @include desktop() {
-    padding-bottom: var(--section-padding);
-    overflow: hidden;
-    
+    background-image: url(../images/about/milk-bg-desk.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right 241px;
 
-    
-  }
-
-  &__bg {
-    @include desktop(){
-      padding-bottom: 100px;
-      margin-bottom: -100px;
-      background-image: url(../images/about/milk-bg-desk.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      @include retina() {
-        background-image: url(../images/about/milk-bg-desk@2.png);
-      }
-    }
-    
-    &--mob {
-      background-image: url(../images/about/milk-bg-mob.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position-y: 35%;
-
-      @include retina() {
-        background-image: url(../images/about/milk-bg-mob@2.png);
-      }
-
-      @include tablet() {
-        background-image: none;
-      }
+    @include retina() {
+      background-image: url(../images/about/milk-bg-desk@2.png);
     }
   }
 }
@@ -57,14 +34,31 @@
 .about__wrap {
   min-width: 280px;
 
+  background-image: url(../images/about/milk-bg-mob.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right 395px;
+
+  @media screen and (min-width: 330px) {
+    background-position: right 380px;
+  }
+  @media screen and (min-width: 403px) {
+    background-position: right 357px;
+  }
+
+  @include retina() {
+    background-image: url(../images/about/milk-bg-mob@2.png);
+  }
+
   @include tablet() {
     display: flex;
+    flex-direction: row;
+    background-image: none;
   }
 }
 .about__column img {
   margin: 0 auto;
   position: absolute;
-
 }
 
 .about__img--coffee,

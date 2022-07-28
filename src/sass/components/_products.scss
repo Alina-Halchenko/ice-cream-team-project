@@ -20,6 +20,10 @@
 .products__item {
   width: 100%;
   margin-top: 62px;
+
+  @include tablet-only() {
+    margin-top: 18px;
+  }
 }
 
 .products__item::before {
