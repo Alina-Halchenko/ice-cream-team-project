@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #e17992;
+  background-color: var(--bg-menu-color);
   z-index: 100;
   width: 100vw;
   height: 100vh;
@@ -87,8 +87,8 @@
 }
 
 .nav__item {
-  border-top: 1px solid #e18298;
+  border-top: 1px solid var(--line-menu-color);
   &:last-child {
-    border-bottom: 1px solid #e18298;
+    border-bottom: 1px solid var(--line-menu-color);
   }
 }

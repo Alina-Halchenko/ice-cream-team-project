@@ -108,19 +108,24 @@
     }
 
     &--mobile {
+        display: block;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 32px;
         padding: 8px 16px;
         min-width: 209px;
-    }
 
-    .header.fixed & {
-        min-width: 114px;
-        min-height: 34px;
-
-        font-size: 12px;
+        @include desktop() {
+            display: none;
+        }
     }
+}
+
+.header.fixed .header__btn-buy--fixed {
+    min-width: 114px;
+    min-height: 34px;
+
+    font-size: 12px;
 }
 
 .desktop-nav__item {

@@ -11,6 +11,11 @@
     }
 
     &__list {
+        @include mobile-only() {
+            width: 230px;
+            padding-right: 15px;
+        }
+
         @include tablet() {
             display: flex;
             flex-wrap: wrap;
@@ -50,6 +55,8 @@
             display: block;
             margin-bottom: 16px;
             width: 100%;
+            height: 50px;
+            background-size: contain;
 
             background-repeat: no-repeat;
 
@@ -76,24 +83,20 @@
     }
 
     &__item:nth-child(1) &__amount::before {
-        height: 50px;
+
         background-image: url("../images/advantages-svg/milk.svg");
     }
 
     &__item:nth-child(2) &__amount::before {
-        height: 50px;
         background-image: url("../images/advantages-svg/apples.svg");
     }
 
     &__item:nth-child(3) &__amount::before {
-        height: 50px;
+
         background-image: url("../images/advantages-svg/heart.svg");
     }
 
     &__text {
-        width: 230px;
-        padding-right: 15px;
-
         font-family: "DM Sans";
 
         @include font(700, 12, 1.7, null);
