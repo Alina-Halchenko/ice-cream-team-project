@@ -360,7 +360,7 @@
     opacity: 0;
   }
 
-  .about {
+  .about__bg {
     @include desktop() {
       background-image: url(../images/about/milk-bg-desk-peach.png);
     
@@ -426,7 +426,7 @@
     opacity: 0;
   }
 
-  .about {
+  .about__bg {
     @include desktop() {
       background-image: url(../images/about/milk-bg-desk-lime.png);
     
