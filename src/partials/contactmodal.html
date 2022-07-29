@@ -1,0 +1,73 @@
+<div class="modal__fr-backdrop is-hidden" data-frmodal>
+  <div class="modal__fr-modal">
+    <button type="button" class="modal__fr-closeBtn" data-frmodal-close>
+      <svg class="modal__fr-closeVector" width="30" height="30">
+        <use href="./images/icons-sprite.svg#icon-menu-cross"></use>
+      </svg>
+    </button>
+    <p class="modal__fr-title">
+      Do you want our ice franchise ? Take a submit !
+    </p>
+    <form class="modal__fr-form">
+      <div class="modal__fr-field">
+        <label for="user-name" class="modal__fr-label">Name</label>
+        <div class="modal__fr-inputWrap">
+          <input
+            type="text"
+            class="modal__fr-input"
+            name="user-name"
+            id="user-name"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal__fr-field">
+        <label for="user-tel" class="modal__fr-label">Tel</label>
+        <div class="modal__fr-inputWrap">
+          <input
+            type="tel"
+            class="modal__fr-input"
+            name="user-tel"
+            id="user-tel"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal__fr-field">
+        <label for="user-mail" class="modal__fr-label">E-mail</label>
+        <div class="modal__fr-inputWrap">
+          <input
+            type="email"
+            class="modal__fr-input"
+            name="user-mail"
+            id="user-mail"
+            required
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="modal__fr-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal__loc-backdrop is-hidden" data-locmodal>
+  <div class="modal__loc-modal">
+    <button type="button" class="modal__loc-closeBtn" data-locmodal-close>
+      <svg class="modal__loc-closeVector" width="30" height="30">
+        <use href="./images/icons-sprite.svg#icon-menu-cross"></use>
+      </svg>
+    </button>
+    <p class="modal__loc-title">
+      Oh, wait! The map is frozen and doesn't open...
+    </p>
+    <div class="modal__loc-container">
+      <div class="modal__loc-icecream">
+        <div class="modal__loc-flavor">
+          <div class="modal__loc-flavours"></div>
+        </div>
+        <div class="modal__loc-stick"></div>
+      </div>
+    </div>
+  </div>
+</div>
