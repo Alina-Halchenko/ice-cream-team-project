@@ -211,6 +211,13 @@
   }
 }
 
+.contacts__link:hover,
+.contacts__link:focus {
+  color: var(--primary-color);
+
+  transition: var(--transition-prop);
+}
+
 .contacts__btn-list {
   display: flex;
   align-items: center;
