@@ -199,6 +199,7 @@
 }
 
 .contacts__link {
+  transition: color var(--transition-prop);
   @include font(500, 12px, 1.5, 0.04em);
   color: var(--text-color-accent);
 
@@ -209,6 +210,11 @@
   @include desktop() {
     font-size: var(--font-size);
   }
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  color: var(--primary-color);
 }
 
 .contacts__btn-list {
