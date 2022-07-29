@@ -206,12 +206,6 @@
   }
 }
 
-.products__item-paragraph-mob {
-  @include tablet {
-    display: none;
-  }
-}
-
 .products__btn {
   display: flex;
   @include centered();
