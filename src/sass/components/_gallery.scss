@@ -73,8 +73,8 @@
 
         @mixin animate($delay) {
             animation-name: gallery-scale;
-            animation-duration: 15000ms;
-            animation-delay: $delay*1.5;
+            animation-duration: 30000ms;
+            animation-delay: $delay*3;
             animation-iteration-count: infinite;
         }
 
