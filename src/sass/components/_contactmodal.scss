@@ -1,308 +1,209 @@
-.modal__fr-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 245, 246, 0.5);
-    transition: opacity 0.5s ease, visibility var(--transition-prop);
-}
-
-.modal__fr-backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
-.modal__fr-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-    padding: 40px;
-    background-image: linear-gradient(
-        to bottom,
-        var(--text-color-light) 38%,
-        var(--bg-color-light) 38%
-    );
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-    transform: translate(-50%, -50%) scale(1) rotate(0);
-    transition: transform var(--transition-prop);
-    .modal__fr-backdrop.is-hidden & {
-        transform: translate(-50%, -50%) scale(1.2) rotate(-180deg);
-    }
-
-    @media screen and (min-width: 480px) {
-        width: 400px;
-    }
-}
-
-.modal__fr-closeBtn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: color var(--transition-prop);
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
-
-.modal__fr-closeVector {
-    stroke: currentColor;
-}
-
 .modal__fr-title {
-    font-family: var(--font-accent);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: var(--primary-color);
-    margin-bottom: 12px;
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  margin-top: 15px;
 
-    @include desktop {
-        line-height: 1.5;
-    }
+  @include tablet {
+    font-size: 26px;
+  }
+
+  @include desktop {
+    line-height: 1.5;
+    font-size: 30px;
+    margin-top: 0;
+  }
 }
 
 .modal__fr-field {
-    margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .modal__fr-input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: transparent;
-    outline: transparent;
-    cursor: pointer;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:focus {
-        border-color: var(--accent-color);
-    }
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0 10px;
+  background-color: transparent;
+  outline: transparent;
+  cursor: pointer;
+  transition: border-color var(--transition-prop);
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 
 .modal__fr-label {
-    font-family: var(--font-main);
-    font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-family: var(--font-main);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  text-align: center;
+  color: var(--text-color-main);
+  transition: all var(--transition-prop);
+
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    line-height: 1.5;
     font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    margin-bottom: 4px;
-    text-align: center;
-    color: var(--text-color-main);
+  }
+}
+
+.modal__fr-input:focus + .modal__fr-label,
+.modal__fr-input:hover + .modal__fr-label,
+.modal__fr-input:not(:placeholder-shown) + .modal__fr-label {
+  top: -20%;
+  left: 0;
 }
 
 .modal__fr-inputWrap {
-    position: relative;
-    margin-top: 4px;
-    color: var(--primary-color);
+  position: relative;
+  margin-top: 4px;
+  color: var(--primary-color);
 }
 
 .modal__fr-btn {
-    position: relative;
-    border-radius: 20px;
-    padding: 12px 25px;
-    font-family: var(--font-main);
-    @include font(400, 14px, 1.15, 0.04em);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    border: none;
-    color: var(--text-color-light);
-    background-color: var(--primary-color);
-    transition: background-color var(--transition-prop);
-    &:hover,
-    &:focus {
-        background-color: #f15277;
-    }
+  position: relative;
+  border-radius: 20px;
+  padding: 12px 25px;
+  font-family: var(--font-main);
+  @include font(400, 14px, 1.15, 0.04em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: none;
+  color: var(--text-color-light);
+  background-color: var(--primary-color);
+  transition: background-color var(--transition-prop);
+  &:hover,
+  &:focus {
+    background-color: #f15277;
+  }
 }
 
 .no-scrool {
-    overflow: hidden;
-}
-
-.modal__loc-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 245, 246, 0.7);
-    transition: opacity 0.5s ease, visibility var(--transition-prop);
-}
-
-.modal__loc-backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+  overflow: hidden;
 }
 
 .modal__loc-container {
-    height: 100%;
+  height: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal__loc-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: auto;
-    padding: 40px;
-    background-image: linear-gradient(
-        to bottom,
-        var(--text-color-light) 38%,
-        var(--bg-color-light) 38%
-    );
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-    transform: translate(-50%, -50%) scale(1) rotate(0);
-    transition: transform var(--transition-prop);
-    .modal__loc-backdrop.is-hidden & {
-        transform: translate(-50%, -50%) scale(1.2) rotate(-180deg);
-    }
-
-    @media screen and (min-width: 480px) {
-        width: 400px;
-    }
-}
-
-.modal__loc-closeBtn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: color var(--transition-prop);
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
-
-.modal__loc-closeVector {
-    stroke: currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__loc-title {
-    font-family: var(--font-accent);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: var(--primary-color);
-    margin-bottom: 12px;
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--primary-color);
+  margin-bottom: 12px;
 
-    @include desktop {
-        line-height: 1.5;
-    }
+  @include tablet {
+    font-size: 26px;
+  }
+
+  @include desktop {
+    line-height: 1.5;
+    font-size: 30px;
+  }
 }
 
 .modal__loc-icecream > .modal__loc-flavor {
-    position: relative;
+  position: relative;
 
-    width: 190px;
-    height: 260px;
+  width: 190px;
+  height: 260px;
 
-    border-radius: 80px 80px 10px 10px;
-    overflow: hidden;
+  border-radius: 80px 80px 10px 10px;
+  overflow: hidden;
 
-    &:after {
-        content: "";
+  &:after {
+    content: '';
 
-        position: absolute;
-        left: 21px;
-        bottom: 20px;
+    position: absolute;
+    left: 21px;
+    bottom: 20px;
 
-        width: 20px;
-        height: 170px;
+    width: 20px;
+    height: 170px;
 
-        border-radius: 50px;
-        background: rgba(255, 255, 255, 0.5);
-    }
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .modal__loc-icecream > .modal__loc-flavor > .modal__loc-flavours {
-    position: relative;
-    top: 0%;
-    left: -20%;
+  position: relative;
+  top: 0%;
+  left: -20%;
 
-    width: 140%;
-    height: 120%;
+  width: 140%;
+  height: 120%;
 
-    background-image: linear-gradient(
-        0deg,
-        #f63a99 25%,
-        #fff5f6 25%,
-        #fff5f6 25%,
-        #fff5f6 50%,
-        #f2d200 50%,
-        #f2d200 50%,
-        #f2d200 75%,
-        #70ca5c 75%
-    );
-    background-position: 0px 0px;
-    background-repeat: repeat-y;
+  background-image: linear-gradient(
+    0deg,
+    #f63a99 25%,
+    #f0f0b4 25%,
+    #f0f0b4 25%,
+    #f0f0b4 50%,
+    #f2d200 50%,
+    #f2d200 50%,
+    #f2d200 75%,
+    #70ca5c 75%
+  );
+  background-position: 0px 0px;
+  background-repeat: repeat-y;
 
-    animation: modal__loc-flavours 100s linear infinite;
-    transform: rotate(155deg);
+  animation: modal__loc-flavours 100s linear infinite;
+  transform: rotate(155deg);
 }
 
 .modal__loc-icecream > .modal__loc-stick {
-    width: 57px;
-    height: 86px;
+  width: 57px;
+  height: 86px;
 
-    background: #e09c5f;
-    border-radius: 0 0 25px 25px;
+  background: #e09c5f;
+  border-radius: 0 0 25px 25px;
 
+  display: block;
+  margin: 0 auto;
+
+  &:after {
     display: block;
-    margin: 0 auto;
+    content: '';
 
-    &:after {
-        display: block;
-        content: "";
+    width: 100%;
+    height: 24px;
 
-        width: 100%;
-        height: 24px;
-
-        background: #8d613b;
-    }
+    background: #8d613b;
+  }
 }
 
 @keyframes modal__loc-flavours {
-    to {
-        background-position: 0 -1000vh;
-    }
+  to {
+    background-position: 0 -1000vh;
+  }
 }

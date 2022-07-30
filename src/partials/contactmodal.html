@@ -1,48 +1,53 @@
-<div class="modal__fr-backdrop is-hidden" data-frmodal>
-  <div class="modal__fr-modal">
-    <button type="button" class="modal__fr-closeBtn" data-frmodal-close>
-      <svg class="modal__fr-closeVector" width="30" height="30">
+<div class="aboutmodal__backdrop is-hidden" data-frmodal>
+  <div class="aboutmodal">
+    <button type="button" class="aboutmodal__close-btn" data-frmodal-close>
+      <svg class="aboutmodal__close-icon" width="15" height="15">
         <use href="./images/icons-sprite.svg#icon-menu-cross"></use>
       </svg>
     </button>
     <p class="modal__fr-title">
-      Do you want our ice franchise ? Take a submit !
+      Do you want our ice franchise ?<br />Take a submit !
     </p>
-    <form class="modal__fr-form">
+    <form class="modal__fr-form" autocomplete="off">
       <div class="modal__fr-field">
-        <label for="user-name" class="modal__fr-label">Name</label>
         <div class="modal__fr-inputWrap">
           <input
             type="text"
             class="modal__fr-input"
             name="user-name"
             id="user-name"
+            placeholder=" "
             required
           />
+          <label for="user-name" class="modal__fr-label">Name:</label>
         </div>
       </div>
       <div class="modal__fr-field">
-        <label for="user-tel" class="modal__fr-label">Tel</label>
         <div class="modal__fr-inputWrap">
           <input
             type="tel"
             class="modal__fr-input"
             name="user-tel"
             id="user-tel"
+            placeholder=" "
             required
           />
+          <label for="user-tel" class="modal__fr-label"
+            >Tel: (0xx-xxx-xx-xx)</label
+          >
         </div>
       </div>
       <div class="modal__fr-field">
-        <label for="user-mail" class="modal__fr-label">E-mail</label>
         <div class="modal__fr-inputWrap">
           <input
             type="email"
             class="modal__fr-input"
             name="user-mail"
             id="user-mail"
+            placeholder=" "
             required
           />
+          <label for="user-mail" class="modal__fr-label">E-mail:</label>
         </div>
       </div>
 
@@ -51,10 +56,10 @@
   </div>
 </div>
 
-<div class="modal__loc-backdrop is-hidden" data-locmodal>
-  <div class="modal__loc-modal">
-    <button type="button" class="modal__loc-closeBtn" data-locmodal-close>
-      <svg class="modal__loc-closeVector" width="30" height="30">
+<div class="aboutmodal__backdrop is-hidden" data-locmodal>
+  <div class="aboutmodal">
+    <button type="button" class="aboutmodal__close-btn" data-locmodal-close>
+      <svg class="aboutmodal__close-icon" width="15" height="15">
         <use href="./images/icons-sprite.svg#icon-menu-cross"></use>
       </svg>
     </button>
