@@ -150,7 +150,7 @@
 
 .hero__img--ice-cream {
   opacity: 0;
-  @media screen and (max-width: ($desktop - 0.1px)) {
+  @media screen and (max-width: ($tablet - 0.1px)) {
     opacity: 1;
   }
 }
@@ -159,14 +159,21 @@
   position: relative;
 }
 
+.ice-cream-picture__box {
+  @include tablet-only() {
+    position: absolute;
+    top: 18px;
+    left: -316px;
+
+    width: 103%;
+  }
+}
+
 .ice-cream-picture__item-1 {
   position: absolute;
   z-index: 1;
-  top: -286px;
+  top: -285px;
   left: 635px;
-  @include tablet-only() {
-    display: none;
-  }
 }
 
 .ice-cream-picture__ani-1 {
@@ -177,11 +184,8 @@
 .ice-cream-picture__item-2 {
   position: absolute;
   z-index: 1;
-  top: -433px;
+  top: -431px;
   left: 636px;
-  @include tablet-only() {
-    display: none;
-  }
 }
 
 .ice-cream-picture__ani-2 {
@@ -196,9 +200,6 @@
   z-index: 1;
   top: -590px;
   left: 637px;
-  @include tablet-only() {
-    display: none;
-  }
 }
 
 .ice-cream-picture__ani-3 {
@@ -213,9 +214,6 @@
   z-index: 1;
   top: -40px;
   left: 636px;
-  @include tablet-only() {
-    display: none;
-  }
 }
 
 .ice-cream-picture__ani-4 {
@@ -223,71 +221,4 @@
     ani-4-1 200ms cubic-bezier(0.14, 1.07, 0.87, 0.91) 2300ms,
     ani-4-1 200ms cubic-bezier(0.14, 1.07, 0.87, 0.91) 3500ms,
     ani-4-1 200ms cubic-bezier(0.14, 1.07, 0.87, 0.91) 4000ms;
-}
-
-@keyframes ice-cream-1 {
-  100% {
-    transform: translateY(246px);
-  }
-}
-
-@keyframes ice-cream-2 {
-  100% {
-    transform: translateY(392px);
-  }
-}
-
-@keyframes ice-cream-3 {
-  100% {
-    transform: translateY(550px);
-  }
-}
-
-@keyframes ice-cream-4 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes ani-4-1 {
-  0% {
-  }
-  50% {
-    transform: translateY(8px);
-  }
-  100% {
-  }
-}
-
-@keyframes ani-3-1 {
-  0% {
-  }
-  50% {
-    transform: translateY(558px);
-  }
-  100% {
-  }
-}
-
-@keyframes ani-2-1 {
-  0% {
-  }
-  50% {
-    transform: translateY(400px);
-  }
-  100% {
-  }
-}
-
-@keyframes ani-1-1 {
-  0% {
-  }
-  50% {
-    transform: translateY(254px);
-  }
-  100% {
-  }
 }
