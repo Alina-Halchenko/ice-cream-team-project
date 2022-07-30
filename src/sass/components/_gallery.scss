@@ -71,11 +71,19 @@
             grid-template-rows: ($gapCellHeight - $gap) auto auto 1fr;
         }
 
+        @mixin animate($delay) {
+            animation-name: gallery-scale;
+            animation-duration: 15000ms;
+            animation-delay: $delay*1.5;
+            animation-iteration-count: infinite;
+        }
+
         &:nth-child(1) {
             @include rows(45px);
 
             @include tablet-only() {
                 @include rows(109px, t);
+                @include animate(0s);
             }
 
             @include desktop() {
@@ -88,10 +96,29 @@
 
             @include tablet-only() {
                 @include rows(68px, t);
+
+                .gallery__img:not(:last-child) {
+                    @include animate(4s);
+                }
+                
+                .gallery__img:last-child {
+                    @include animate(7s);
+                }
             }
 
             @include desktop() {
                 @include rows(89px, d);
+            }
+        }
+
+        &:nth-child(3) {
+            @include tablet-only(){
+                .gallery__img:not(:last-child) {
+                    @include animate(9s);
+                }
+                .gallery__img:last-child {
+                    @include animate(5s);
+                }
             }
         }
 
@@ -100,6 +127,13 @@
 
             @include tablet-only() {
                 @include rows(75px, t);
+                
+                .gallery__img:not(:last-child) {
+                    @include animate(3s);
+                }
+                .gallery__img:last-child {
+                    @include animate(1s);
+                }
             }
 
             @include desktop() {
@@ -112,6 +146,13 @@
 
             @include tablet-only() {
                 @include rows(51px, t);
+                
+                .gallery__img:not(:last-child) {
+                    @include animate(6s);
+                }
+                .gallery__img:last-child {
+                    @include animate(8s);
+                }
             }
 
             @include desktop() {
@@ -124,6 +165,7 @@
 
             @include tablet-only() {
                 @include rows(118px, t);
+                @include animate(2s);
             }
 
             @include desktop() {
