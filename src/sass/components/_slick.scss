@@ -47,6 +47,14 @@ li.slick-active button {
   background-position: left top;
 }
 
+.coffee-scheme li.slick-active button {
+  background-image: url("../images/reviews/carousel-home-coffee.svg");
+}
+
+.green-scheme li.slick-active button {
+  background-image: url("../images/reviews/carousel-home-green.svg");
+}
+
 li.slick-active button:hover {
   cursor: pointer;
 }
