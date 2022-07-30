@@ -120,6 +120,7 @@
   letter-spacing: 0.04em;
   color: var(--primary-color);
   margin-bottom: 12px;
+  margin-top: 15px;
 
   @include tablet {
     font-size: 26px;
@@ -128,6 +129,7 @@
   @include desktop {
     line-height: 1.5;
     font-size: 30px;
+    margin-top: 0;
   }
 }
 
