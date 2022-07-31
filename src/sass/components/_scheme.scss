@@ -70,6 +70,14 @@
     .advantages__item:nth-child(3) .advantages__amount::before {
         background-image: url("../images/advantages-svg/heart-peach.svg");
     }
+
+    .advantages__item:nth-child(1) .advantages__amount::after {
+        background-image: url("../images/advantages-svg/udder-peach.svg");
+    }
+
+    .advantages__item:nth-child(2) .advantages__amount::after {
+        background-image: url("../images/advantages-svg/apple-small-peach.svg");
+    }
 }
 
 .green-scheme {
@@ -138,6 +146,14 @@
 
     .advantages__item:nth-child(3) .advantages__amount::before {
         background-image: url("../images/advantages-svg/heart-lime.svg");
+    }
+
+    .advantages__item:nth-child(1) .advantages__amount::after {
+        background-image: url("../images/advantages-svg/udder-lime.svg");
+    }
+
+    .advantages__item:nth-child(2) .advantages__amount::after {
+        background-image: url("../images/advantages-svg/apple-small-lime.svg");
     }
 }
 

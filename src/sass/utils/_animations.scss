@@ -35,3 +35,36 @@
         box-shadow: 0 0 15px 1px var(--primary-color);
     }
 }
+
+// Advantages animation
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.07);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.07);
+    }
+}
+
+@keyframes rolling {
+        0% {
+    
+            transform: translateX(0) rotate(0);
+        }
+
+        50% {
+
+            transform: translateX(70px) rotate(360deg);
+        }
+
+        100% {
+
+            transform: translateX(0) rotate(0);
+        }
+}
