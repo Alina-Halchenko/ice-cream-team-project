@@ -1,27 +1,10 @@
-.modal__fr-title {
-  font-family: var(--font-accent);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: var(--primary-color);
-  margin-bottom: 20px;
-  margin-top: 15px;
-
-  @include tablet {
-    font-size: 26px;
-  }
-
-  @include desktop {
-    line-height: 1.5;
-    font-size: 30px;
-    margin-top: 0;
-  }
+.modal__title--franchise {
+  max-width: 480px;
+  margin-bottom: 25px;
 }
 
 .modal__fr-field {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .modal__fr-input {
@@ -51,14 +34,14 @@
   letter-spacing: 0.01em;
   margin-bottom: 4px;
   text-align: center;
-  color: var(--text-color-main);
+  color: var(--text-color-accent);
   transition: all var(--transition-prop);
 
-  @include tablet {
+  @include tablet() {
     font-size: 12px;
   }
 
-  @include desktop {
+  @include desktop() {
     line-height: 1.5;
     font-size: 14px;
   }
@@ -67,8 +50,18 @@
 .modal__fr-input:focus + .modal__fr-label,
 .modal__fr-input:hover + .modal__fr-label,
 .modal__fr-input:not(:placeholder-shown) + .modal__fr-label {
-  top: -20%;
+  top: -25%;
   left: 0;
+  font-size: 12px;
+
+  @include tablet() {
+    color: var(--text-color-main);
+    font-size: 14px;
+  }
+
+  @include desktop() {
+    font-size: 16px;
+  }
 }
 
 .modal__fr-inputWrap {
@@ -122,11 +115,11 @@
   margin-bottom: 12px;
   margin-top: 15px;
 
-  @include tablet {
+  @include tablet() {
     font-size: 26px;
   }
 
-  @include desktop {
+  @include desktop() {
     line-height: 1.5;
     font-size: 30px;
     margin-top: 0;
@@ -143,7 +136,7 @@
   overflow: hidden;
 
   &:after {
-    content: '';
+    content: "";
 
     position: absolute;
     left: 21px;
@@ -195,7 +188,7 @@
 
   &:after {
     display: block;
-    content: '';
+    content: "";
 
     width: 100%;
     height: 24px;
