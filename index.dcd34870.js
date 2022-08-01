@@ -1,0 +1,2 @@
+!function(){var e={openVideomodalBtn:document.querySelector("#open-video-modal"),closeVideomodalBtn:document.querySelector("#close-video-modal"),videomodal:document.querySelector("[data-hero-video]"),body:document.querySelector("body")};function o(){e.videomodal.classList.toggle("is-hidden"),e.body.classList.toggle("no-scroll")}e.openVideomodalBtn.addEventListener("click",o),e.closeVideomodalBtn.addEventListener("click",o)}();
+//# sourceMappingURL=index.dcd34870.js.map
