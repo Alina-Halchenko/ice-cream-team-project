@@ -1,0 +1,151 @@
+.btn {
+    display: block;
+    min-width: 161px;
+    min-height: 44px;
+    padding: 14px 17px;
+
+    border: 0;
+    border-radius: 22px;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: var(--font-size);
+    line-height: 1.31;
+    color: var(--text-color-light);
+    background-color: var(--btn-primary-color);
+    box-shadow: 0px 0px 20px -15px #000000;
+
+    transition: all var(--transition-prop);
+
+    @include tablet-only() {
+        min-width: 168px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    &:focus,
+    &:hover {
+        color: var(--primary-color);
+        background-color: #ffffff;
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px -10px #000000;
+    }
+
+    &--with-icon {
+        @include centered();
+    }
+
+    &--wide {
+        min-width: 176px;
+    }
+}
+
+.btn--sm {
+    min-width: 62px;
+    min-height: 24px;
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+
+    @include desktop() {
+        padding: 11px 22px;
+        font-size: 14px;
+        line-height: 1.29;
+    }
+
+    &:focus,
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn--reverse {
+    color: var(--primary-color);
+    background-color: #ffffff;
+
+    &:focus,
+    &:hover {
+        background-color: var(--btn-accent-color);
+    }
+}
+
+.btn--centered {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn-round {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px -15px #000000;
+
+    transition: all var(--transition-prop);
+
+    &:focus,
+    &:hover {
+        color: var(--primary-color);
+        background-color: var(--btn-accent-color);
+        transform: scale(1.05);
+        box-shadow: 0px 0px 20px -10px #000000;
+    }
+}
+
+.btn-round--sm {
+    width: 18px;
+    height: 18px;
+
+    @include desktop() {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+.btn__icon {
+    stroke: currentColor;
+    fill: currentColor;
+
+    &--right {
+        margin-left: 8px;
+        @include tablet() {
+            margin-left: 13px;
+        }
+    }
+
+    &--left {
+        margin-right: 8px;
+        @include tablet() {
+            margin-right: 13px;
+        }
+    }
+
+    &--rotate {
+        transform: rotate(0);
+        transition: transform var(--transition-prop);
+
+        .btn:hover &,
+        .btn:focus &,
+        .btn-round:hover &,
+        .btn-round:focus & {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .btn-round--sm & {
+        width: 7px;
+        height: 7px;
+
+        @include desktop() {
+            width: 9px;
+            height: 9px;
+        }
+    }
+}
