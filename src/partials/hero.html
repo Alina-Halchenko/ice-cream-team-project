@@ -6,31 +6,25 @@
         ice cream made with
         <span class="hero__title hero__title--pink">passion</span>
       </h1>
-      <ul class="department__list">
+      <ul class="department__list page-count">
         <li class="department__item">
-          <p class="department__number">16</p>
+          <p data-digits-counter class="department__number">16</p>
           <p class="department__kind">cafes</p>
         </li>
         <li class="department__item">
-          <p class="department__number">23</p>
+          <p data-digits-counter class="department__number">23</p>
           <p class="department__kind">food trucks</p>
         </li>
       </ul>
     </div>
     <ul class="hero__list">
       <li class="hero__item">
-        <a
-          href="#products"
-          data-scroll="#products"
-          class="hero__link hero__link--pink"
+        <a href="#products" data-scroll="#products" class="btn btn--sm"
           >Products</a
         >
       </li>
       <li class="hero__item">
-        <a
-          href="#about"
-          data-scroll="#about"
-          class="hero__link hero__link--white"
+        <a href="#about" data-scroll="#about" class="btn btn--sm btn--reverse"
           >How it’s made?</a
         >
       </li>
@@ -42,12 +36,12 @@
       </p>
       <button
         type="button"
-        class="hero__btn"
         id="open-video-modal"
+        class="btn-round btn-round--sm btn--reverse btn--with-icon"
         aria-label="More information"
         data-green-magic
       >
-        <svg class="hero__btn-icon" width="8" height="7">
+        <svg class="btn__icon">
           <use href="./images/icons-sprite.svg#icon-arrow-right"></use>
         </svg>
       </button>

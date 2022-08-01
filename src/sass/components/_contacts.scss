@@ -53,7 +53,7 @@
   padding: 40px 32px;
 
   background: var(--text-color-light);
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  box-shadow: 0px 2px 20px var(--accent-color);
   border-radius: 24px;
 
   @include mobile-only() {
