@@ -51,7 +51,7 @@
     color: var(--primary-color);
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       margin-bottom: 16px;
       width: 100%;
@@ -69,10 +69,6 @@
       }
     }
 
-    &-text::after {
-      content: 'KG';
-    }
-
     @include font(400, 36, 1.14, 0.04em);
 
     @include tablet-only() {
@@ -87,19 +83,19 @@
   }
 
   &__item:nth-child(1) &__amount::before {
-    background-image: url('../images/advantages-svg/milk.svg');
+    background-image: url("../images/advantages-svg/milk.svg");
   }
 
   &__item:nth-child(2) &__amount::before {
-    background-image: url('../images/advantages-svg/apples.svg');
+    background-image: url("../images/advantages-svg/apples.svg");
   }
 
   &__item:nth-child(3) &__amount::before {
-    background-image: url('../images/advantages-svg/heart.svg');
+    background-image: url("../images/advantages-svg/heart.svg");
   }
 
   &__text {
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
 
     @include font(700, 12, 1.7, null);
 
