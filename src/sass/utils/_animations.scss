@@ -44,7 +44,6 @@
         transform: scale(1);
         z-index: 1;
     }
-
 }
 
 // Advantages animation
@@ -64,17 +63,15 @@
 }
 
 @keyframes rolling {
-        0% {
-    
-            transform: translateX(0) rotate(0);
-        }
+    0% {
+        transform: translateX(0) rotate(0);
+    }
 
-        50% {
+    50% {
+        transform: translateX(70px) rotate(360deg);
+    }
 
-            transform: translateX(70px) rotate(360deg);
-        }
-
-        100% {
-
-            transform: translateX(0) rotate(0);
-        }
+    100% {
+        transform: translateX(0) rotate(0);
+    }
+}

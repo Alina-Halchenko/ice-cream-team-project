@@ -28,7 +28,7 @@
   }
 
   &__item {
-  position: relative;
+    position: relative;
     @include desktop {
       width: calc((100% - 64px) / 3);
     }
@@ -49,6 +49,15 @@
     font-family: var(--font-accent);
     text-transform: lowercase;
     color: var(--primary-color);
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
     &::before {
       content: "";
@@ -85,41 +94,40 @@
     background-image: url("../images/advantages-svg/milk.svg");
   }
 
-    &__item:nth-child(1) &__amount::after {
-        top: 0;
-        z-index: 5;
+  &__item:nth-child(1) &__amount::after {
+    top: 0;
+    z-index: 5;
 
-        width: 33px;
-        height: 50px;
-        background-image: url("../images/advantages-svg/udder.svg");
+    width: 33px;
+    height: 50px;
+    background-image: url("../images/advantages-svg/udder.svg");
 
-        animation: heartbeat 1s ease-in-out infinite;
-        transform-origin: top;
-    }
+    animation: heartbeat 1s ease-in-out infinite;
+    transform-origin: top;
+  }
 
-    &__item:nth-child(2) &__amount::after {
-        top: 28px;
-        left: 27px;
-        z-index: 5;
+  &__item:nth-child(2) &__amount::after {
+    top: 28px;
+    left: 30px;
+    z-index: 5;
 
-        width: 21px;
-        height: 30px;
-        background-image: url("../images/advantages-svg/apple-small.svg");
+    width: 21px;
+    height: 30px;
+    background-image: url("../images/advantages-svg/apple-small.svg");
 
-        animation: rolling 5s ease-in-out infinite;
-    }
+    animation: rolling 5s ease-in-out infinite;
+  }
 
   &__item:nth-child(2) &__amount::before {
     background-image: url("../images/advantages-svg/apples.svg");
   }
 
-
   &__item:nth-child(3) &__amount::before {
-         background-image: url("../images/advantages-svg/heart.svg");
+    background-image: url("../images/advantages-svg/heart.svg");
 
-        animation: heartbeat 1s ease infinite;
-        transform-origin: left;
-    }
+    animation: heartbeat 1s ease infinite;
+    transform-origin: left;
+  }
 
   &__text {
     font-family: "DM Sans";
