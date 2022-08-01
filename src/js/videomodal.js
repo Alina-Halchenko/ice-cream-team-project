@@ -1,8 +1,8 @@
 (() => {
     const refs = {
-      openVideomodalBtn: document.querySelector('.hero__btn'),
-      closeVideomodalBtn: document.querySelector('.videomodal__button-close'),
-      videomodal: document.querySelector('.video-backdrop'),
+      openVideomodalBtn: document.querySelector('#open-video-modal'),
+      closeVideomodalBtn: document.querySelector('#close-video-modal'),
+      videomodal: document.querySelector('[data-hero-video]'),
       body: document.querySelector('body'),
     };
   
