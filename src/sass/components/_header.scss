@@ -37,6 +37,12 @@
         justify-content: space-between;
         padding-top: 37px;
     }
+
+    & .header__btn-buy {
+        @include mobile-only() {
+            display: none;
+        }
+    }
 }
 .header.fixed .header-wrapper {
     padding-top: 3px;
@@ -73,46 +79,19 @@
 }
 
 .header__btn-buy {
-    justify-content: center;
-    align-items: center;
-    min-width: 160px;
-    min-height: 44px;
-    border-radius: 22px;
-    padding: 5px 10px;
-
-    background-color: #fff;
-    border: 0;
-
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    color: var(--primary-color);
-
-    transition: background-color var(--transition-prop);
     animation-name: shadow-drop-center;
-    // change-color;
     animation-duration: 2000ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
-    &:hover,
-    &:focus {
-        background-color: #ecebeb;
-    }
-    @media screen and (max-width: 767px) {
-        display: none;
-    }
     @include desktop() {
         cursor: pointer;
     }
 
     &--mobile {
-        display: block;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 32px;
-        padding: 8px 16px;
         min-width: 209px;
 
         @include desktop() {
@@ -124,6 +103,8 @@
 .header.fixed .header__btn-buy--fixed {
     min-width: 114px;
     min-height: 34px;
+    padding-top: 9px;
+    padding-bottom: 9px;
 
     font-size: 12px;
 }

@@ -206,37 +206,6 @@
   }
 }
 
-// .products__btn {
-//   display: flex;
-//   @include centered();
-//   margin-left: auto;
-//   margin-right: auto;
-//   width: 40px;
-//   height: 40px;
-//   border-radius: 50%;
-//   border: none;
-//   background-color: #ffffff;
-//   cursor: pointer;
-//   transition: var(--transition-prop);
-
-//   &:hover,
-//   &:focus {
-//     background-color: var(--btn-accent-color);
-//   }
-// }
-
-// .products__btn-icon {
-//   fill: var(--btn-primary-color);
-
-//   transform: rotate(0);
-
-//   transition: transform var(--transition-prop);
-
-//   .arrow--turned & {
-//     transform: rotate(0.5turn);
-//   }
-// }
-
 .description {
   position: absolute;
   z-index: 1;
@@ -385,10 +354,6 @@
 
 .description__list--ice-coffee {
   color: #dd9312;
-}
-
-.description__list--ice-coffee li {
-  padding-bottom: 5px;
 }
 
 .description__list--milkshakes {

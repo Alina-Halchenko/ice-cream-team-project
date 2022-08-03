@@ -30,6 +30,24 @@
         z-index: 3;
     }
 
+    .about::before {
+        background-image: url(../images/about/milk-bg-desk-peach.png);
+
+        @include retina() {
+            background-image: url(../images/about/milk-bg-desk-peach@2.png);
+        }
+    }
+
+    .about__column--second {
+        @include mobile-only() {
+            background-image: url(../images/about/milk-bg-mob-peach.png);
+
+            @include retina() {
+                background-image: url(../images/about/milk-bg-mob-peach@2.png);
+            }
+        }
+    }
+
     .about__img--coffee {
         z-index: 2;
         opacity: 1;
@@ -37,26 +55,6 @@
 
     .about__img--pink {
         opacity: 0;
-    }
-
-    .about__bg {
-        @include desktop() {
-            background-image: url(../images/about/milk-bg-desk-peach.png);
-
-            @include retina() {
-                background-image: url(../images/about/milk-bg-desk-peach@2.png);
-            }
-        }
-
-        &--mob {
-            @include mobile-only() {
-                background-image: url(../images/about/milk-bg-mob-peach.png);
-
-                @include retina() {
-                    background-image: url(../images/about/milk-bg-mob-peach@2.png);
-                }
-            }
-        }
     }
 
     .advantages__item:nth-child(1) .advantages__amount::before {
@@ -108,6 +106,24 @@
         z-index: 3;
     }
 
+    .about::before {
+        background-image: url(../images/about/milk-bg-desk-lime.png);
+
+        @include retina() {
+            background-image: url(../images/about/milk-bg-desk-lime@2.png);
+        }
+    }
+
+    .about__column--second {
+        @include mobile-only() {
+            background-image: url(../images/about/milk-bg-mob-lime.png);
+
+            @include retina() {
+                background-image: url(../images/about/milk-bg-mob-lime@2.png);
+            }
+        }
+    }
+
     .about__img--green {
         z-index: 2;
         opacity: 1;
@@ -115,25 +131,6 @@
 
     .about__img--pink {
         opacity: 0;
-    }
-
-    .about__bg {
-        @include desktop() {
-            background-image: url(../images/about/milk-bg-desk-lime.png);
-
-            @include retina() {
-                background-image: url(../images/about/milk-bg-desk-lime@2.png);
-            }
-        }
-        &--mob {
-            @include mobile-only() {
-                background-image: url(../images/about/milk-bg-mob-lime.png);
-
-                @include retina() {
-                    background-image: url(../images/about/milk-bg-mob-lime@2.png);
-                }
-            }
-        }
     }
 
     .advantages__item:nth-child(1) .advantages__amount::before {

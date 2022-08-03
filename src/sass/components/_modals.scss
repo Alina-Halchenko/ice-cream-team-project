@@ -40,6 +40,12 @@
     @include desktop() {
         padding: 32px;
     }
+
+    &--video {
+        width: 80%;
+        height: 80%;
+        padding: 35px;
+    }
 }
 
 .modal__close-btn {

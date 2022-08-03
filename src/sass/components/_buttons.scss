@@ -2,7 +2,7 @@
     display: block;
     min-width: 161px;
     min-height: 44px;
-    padding: 14px 17px;
+    padding: 12px 17px;
 
     border: 0;
     border-radius: 22px;
@@ -76,6 +76,13 @@
 .btn--centered {
     margin-right: auto;
     margin-left: auto;
+}
+
+.btn--animated {
+    animation-name: shadow-drop-center;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .btn-round {

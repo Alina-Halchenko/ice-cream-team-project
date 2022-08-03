@@ -1,6 +1,7 @@
 .about {
   padding-top: var(--section-padding);
   background-color: var(--bg-color-light);
+  position: relative;
 
   @include tablet() {
     padding-bottom: 0;
@@ -8,11 +9,25 @@
 }
 
 .about .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about::before {
   @include desktop() {
+    content: "";
+    display: block;
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
     background-image: url(../images/about/milk-bg-desk.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: right 241px;
+    background-position: right 240px;
 
     @include retina() {
       background-image: url(../images/about/milk-bg-desk@2.png);
@@ -33,22 +48,6 @@
 
 .about__wrap {
   min-width: 280px;
-
-  background-image: url(../images/about/milk-bg-mob.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: right 395px;
-
-  @media screen and (min-width: 330px) {
-    background-position: right 380px;
-  }
-  @media screen and (min-width: 403px) {
-    background-position: right 357px;
-  }
-
-  @include retina() {
-    background-image: url(../images/about/milk-bg-mob@2.png);
-  }
 
   @include tablet() {
     display: flex;
@@ -87,6 +86,15 @@
 .about__column--second {
   @include mobile-only() {
     padding-right: 60px;
+
+    background-image: url(../images/about/milk-bg-mob.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right 25%;
+
+    @include retina() {
+      background-image: url(../images/about/milk-bg-mob@2.png);
+    }
   }
 
   @include desktop() {
