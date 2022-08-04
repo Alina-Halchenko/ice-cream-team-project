@@ -30,11 +30,13 @@
         z-index: 3;
     }
 
-    .about::before {
-        background-image: url(../images/about/milk-bg-desk-peach.png);
+    .about__bg {
+        @include desktop() {
+            background-image: url(../images/about/bg/milk-bg-desk-peach-left.png), url(../images/about/bg/milk-bg-desk-peach-right.png);
 
-        @include retina() {
-            background-image: url(../images/about/milk-bg-desk-peach@2.png);
+            @include retina() {
+                background-image: url(../images/about/bg/milk-bg-desk-peach-left@2.png), url(../images/about/bg/milk-bg-desk-peach-right@2.png);
+            }
         }
     }
 
@@ -106,11 +108,13 @@
         z-index: 3;
     }
 
-    .about::before {
-        background-image: url(../images/about/milk-bg-desk-lime.png);
+    .about__bg {
+        @include desktop() {
+            background-image: url(../images/about/bg/milk-bg-desk-lime-left.png), url(../images/about/bg/milk-bg-desk-lime-right.png);
 
-        @include retina() {
-            background-image: url(../images/about/milk-bg-desk-lime@2.png);
+            @include retina() {
+                background-image: url(../images/about/bg/milk-bg-desk-lime-left@2.png), url(../images/about/bg/milk-bg-desk-lime-right@2.png);
+            }
         }
     }
 

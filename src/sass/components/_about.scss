@@ -6,31 +6,19 @@
   @include tablet() {
     padding-bottom: 0;
   }
-}
 
-.about .container {
-  position: relative;
-  z-index: 2;
-}
+  &__bg {
+    @include desktop() {
+      padding-bottom: 100px;
+      margin-bottom: -100px;
+      background-image: url(../images/about/bg/milk-bg-desk-left.png), url(../images/about/bg/milk-bg-desk-right.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left, right;
 
-.about::before {
-  @include desktop() {
-    content: "";
-    display: block;
-    width: 1200px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    background-image: url(../images/about/milk-bg-desk.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: right 240px;
-
-    @include retina() {
-      background-image: url(../images/about/milk-bg-desk@2.png);
+      @include retina() {
+        background-image: url(../images/about/bg/milk-bg-desk-left@2.png), url(../images/about/bg/milk-bg-desk-right@2.png);
+      }
     }
   }
 }
@@ -90,7 +78,7 @@
     background-image: url(../images/about/milk-bg-mob.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: right 25%;
+    background-position-y: 25%;
 
     @include retina() {
       background-image: url(../images/about/milk-bg-mob@2.png);
